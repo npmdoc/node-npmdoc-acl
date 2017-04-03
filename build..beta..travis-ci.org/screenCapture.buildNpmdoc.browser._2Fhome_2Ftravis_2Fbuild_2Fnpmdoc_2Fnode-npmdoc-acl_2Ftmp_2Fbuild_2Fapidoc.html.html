@@ -1,0 +1,1831 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/optimalbits/node_acl">acl (v0.4.10)</a>
+</h1>
+<h4>An Access Control List module, based on Redis with Express middleware support</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl">module acl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract">
+            function <span class="apidocSignatureSpan">acl.</span>contract
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend">
+            function <span class="apidocSignatureSpan">acl.</span>memoryBackend
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend">
+            function <span class="apidocSignatureSpan">acl.</span>mongodbBackend
+            <span class="apidocSignatureSpan">(db, prefix, useSingle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend">
+            function <span class="apidocSignatureSpan">acl.</span>redisBackend
+            <span class="apidocSignatureSpan">(redis, prefix)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>backend</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>memoryBackend.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>mongodbBackend.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>redisBackend.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.backend">module acl.backend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.add">
+            function <span class="apidocSignatureSpan">acl.backend.</span>add
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.begin">
+            function <span class="apidocSignatureSpan">acl.backend.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.clean">
+            function <span class="apidocSignatureSpan">acl.backend.</span>clean
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.del">
+            function <span class="apidocSignatureSpan">acl.backend.</span>del
+            <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.end">
+            function <span class="apidocSignatureSpan">acl.backend.</span>end
+            <span class="apidocSignatureSpan">(transaction, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.get">
+            function <span class="apidocSignatureSpan">acl.backend.</span>get
+            <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.remove">
+            function <span class="apidocSignatureSpan">acl.backend.</span>remove
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.union">
+            function <span class="apidocSignatureSpan">acl.backend.</span>union
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.unions">
+            function <span class="apidocSignatureSpan">acl.backend.</span>unions
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.contract">module acl.contract</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">acl.contract.</span>debug</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.contract">
+            function <span class="apidocSignatureSpan">acl.</span>contract
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.end">
+            function <span class="apidocSignatureSpan">acl.contract.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.params">
+            function <span class="apidocSignatureSpan">acl.contract.</span>params
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.memoryBackend">module acl.memoryBackend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.memoryBackend">
+            function <span class="apidocSignatureSpan">acl.</span>memoryBackend
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.memoryBackend.prototype">module acl.memoryBackend.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.add">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>add
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.begin">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.clean">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>clean
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.del">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>del
+            <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.end">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>end
+            <span class="apidocSignatureSpan">(transaction, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.get">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>get
+            <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.remove">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>remove
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.union">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>union
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend.prototype.unions">
+            function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>unions
+            <span class="apidocSignatureSpan">(buckets, keys, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.mongodbBackend">module acl.mongodbBackend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.mongodbBackend">
+            function <span class="apidocSignatureSpan">acl.</span>mongodbBackend
+            <span class="apidocSignatureSpan">(db, prefix, useSingle)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.mongodbBackend.prototype">module acl.mongodbBackend.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.add">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>add
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.begin">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.clean">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>clean
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.del">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>del
+            <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.end">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>end
+            <span class="apidocSignatureSpan">(transaction, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.get">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>get
+            <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.remove">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>remove
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.mongodbBackend.prototype.union">
+            function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>union
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.redisBackend">module acl.redisBackend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.redisBackend">
+            function <span class="apidocSignatureSpan">acl.</span>redisBackend
+            <span class="apidocSignatureSpan">(redis, prefix)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.redisBackend.prototype">module acl.redisBackend.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.add">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>add
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.begin">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.bucketKey">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>bucketKey
+            <span class="apidocSignatureSpan">(bucket, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.clean">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>clean
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.del">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>del
+            <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.end">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>end
+            <span class="apidocSignatureSpan">(transaction, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.get">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>get
+            <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.remove">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>remove
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.union">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>union
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.redisBackend.prototype.unions">
+            function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>unions
+            <span class="apidocSignatureSpan">(buckets, keys, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl" id="apidoc.module.acl">module acl</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract" id="apidoc.element.acl.contract">
+        function <span class="apidocSignatureSpan">acl.</span>contract
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contract = function (args){
+  if(contract.debug===true){
+    contract.fulfilled = false;
+    contract.args = _.toArray(args);
+    contract.checkedParams = [];
+    return contract;
+  }else{
+    return noop;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend" id="apidoc.element.acl.memoryBackend">
+        function <span class="apidocSignatureSpan">acl.</span>memoryBackend
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MemoryBackend(){
+  this._buckets = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var acl = require('acl');
+
+// Using redis backend
+acl = new acl(new acl.redisBackend(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">memoryBackend</span>());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
+```
+
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend" id="apidoc.element.acl.mongodbBackend">
+        function <span class="apidocSignatureSpan">acl.</span>mongodbBackend
+        <span class="apidocSignatureSpan">(db, prefix, useSingle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MongoDBBackend(db, prefix, useSingle){
+  this.db = db;
+  this.prefix = typeof prefix !== 'undefined' ? prefix : '';
+  this.useSingle = (typeof useSingle !== 'undefined') ? useSingle : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Using redis backend
+acl = new acl(new acl.redisBackend(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.memoryBackend());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">mongodbBackend</span>(dbInstance, prefix));
+```
+
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+
+Create roles implicitly by giving them permissions:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend" id="apidoc.element.acl.redisBackend">
+        function <span class="apidocSignatureSpan">acl.</span>redisBackend
+        <span class="apidocSignatureSpan">(redis, prefix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RedisBackend(redis, prefix){
+  this.redis = redis;
+  this.prefix = prefix || 'acl';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Create your acl module by requiring it and instantiating it with a valid backend instance:
+
+```javascript
+var acl = require('acl');
+
+// Using redis backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">redisBackend</span>(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.memoryBackend());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
+```
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.backend" id="apidoc.module.acl.backend">module acl.backend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.add" id="apidoc.element.acl.backend.add">
+        function <span class="apidocSignatureSpan">acl.backend.</span>add
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('object', 'string', 'string|number','string|array|number')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.begin" id="apidoc.element.acl.backend.begin">
+        function <span class="apidocSignatureSpan">acl.backend.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">begin = function (){
+  // returns a transaction object
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.clean" id="apidoc.element.acl.backend.clean">
+        function <span class="apidocSignatureSpan">acl.backend.</span>clean
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clean = function (cb){
+  contract(arguments).params('function').end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.del" id="apidoc.element.acl.backend.del">
+        function <span class="apidocSignatureSpan">acl.backend.</span>del
+        <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (transaction, bucket, keys){
+  contract(arguments)
+      .params('object', 'string', 'string|array')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.end" id="apidoc.element.acl.backend.end">
+        function <span class="apidocSignatureSpan">acl.backend.</span>end
+        <span class="apidocSignatureSpan">(transaction, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (transaction, cb){
+  contract(arguments).params('object', 'function').end();
+  // Execute transaction
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // returns a transaction object
+},
+
+/**
+   Ends a transaction (and executes it)
+*/
+end : function(transaction, cb){
+  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
+  // Execute transaction
+},
+
+/**
+  Cleans the whole storage.
+*/
+clean : function(cb){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.get" id="apidoc.element.acl.backend.get">
+        function <span class="apidocSignatureSpan">acl.backend.</span>get
+        <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (bucket, key, cb){
+  contract(arguments)
+      .params('string', 'string|number', 'function')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.remove" id="apidoc.element.acl.backend.remove">
+        function <span class="apidocSignatureSpan">acl.backend.</span>remove
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('object', 'string', 'string|number','string|array|number')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.union" id="apidoc.element.acl.backend.union">
+        function <span class="apidocSignatureSpan">acl.backend.</span>union
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union = function (bucket, keys, cb){
+  contract(arguments)
+    .params('string', 'array', 'function')
+    .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.unions" id="apidoc.element.acl.backend.unions">
+        function <span class="apidocSignatureSpan">acl.backend.</span>unions
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unions = function (bucket, keys, cb){
+  contract(arguments)
+      .params('array', 'array', 'function')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.contract" id="apidoc.module.acl.contract">module acl.contract</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract.contract" id="apidoc.element.acl.contract.contract">
+        function <span class="apidocSignatureSpan">acl.</span>contract
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contract = function (args){
+  if(contract.debug===true){
+    contract.fulfilled = false;
+    contract.args = _.toArray(args);
+    contract.checkedParams = [];
+    return contract;
+  }else{
+    return noop;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract.end" id="apidoc.element.acl.contract.end">
+        function <span class="apidocSignatureSpan">acl.contract.</span>end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (){
+  if(!this.fulfilled){
+    printParamsError(this.args, this.checkedParams);
+    throw new Error('Broke parameter contract');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // returns a transaction object
+},
+
+/**
+   Ends a transaction (and executes it)
+*/
+end : function(transaction, cb){
+  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
+  // Execute transaction
+},
+
+/**
+  Cleans the whole storage.
+*/
+clean : function(cb){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract.params" id="apidoc.element.acl.contract.params">
+        function <span class="apidocSignatureSpan">acl.contract.</span>params
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">params = function (){
+  var i, len;
+  this.fulfilled |= checkParams(this.args, _.toArray(arguments));
+  if(this.fulfilled){
+    return noop;
+  }else{
+    this.checkedParams.push(arguments);
+    return this;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // returns a transaction object
+},
+
+/**
+   Ends a transaction (and executes it)
+*/
+end : function(transaction, cb){
+  contract(arguments).<span class="apidocCodeKeywordSpan">params</span>('object', 'function').end();
+  // Execute transaction
+},
+
+/**
+  Cleans the whole storage.
+*/
+clean : function(cb){
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.memoryBackend" id="apidoc.module.acl.memoryBackend">module acl.memoryBackend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.memoryBackend" id="apidoc.element.acl.memoryBackend.memoryBackend">
+        function <span class="apidocSignatureSpan">acl.</span>memoryBackend
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MemoryBackend(){
+  this._buckets = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var acl = require('acl');
+
+// Using redis backend
+acl = new acl(new acl.redisBackend(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">memoryBackend</span>());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
+```
+
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.memoryBackend.prototype" id="apidoc.module.acl.memoryBackend.prototype">module acl.memoryBackend.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.add" id="apidoc.element.acl.memoryBackend.prototype.add">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>add
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('array', 'string', 'string|number', 'string|array|number')
+      .end();
+
+  var self = this;
+  values = makeArray(values);
+
+  transaction.push(function(){
+    if(!self._buckets[bucket]){
+      self._buckets[bucket] = {};
+    }
+    if(!self._buckets[bucket][key]){
+      self._buckets[bucket][key] = values;
+    }else{
+      self._buckets[bucket][key] = _.union(values, self._buckets[bucket][key]);
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.begin" id="apidoc.element.acl.memoryBackend.prototype.begin">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">begin = function (){
+  // returns a transaction object(just an array of functions will do here.)
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.clean" id="apidoc.element.acl.memoryBackend.prototype.clean">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>clean
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clean = function (cb){
+  contract(arguments).params('function').end();
+  this._buckets = {};
+  cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.del" id="apidoc.element.acl.memoryBackend.prototype.del">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>del
+        <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (transaction, bucket, keys){
+  contract(arguments)
+      .params('array', 'string', 'string|array')
+      .end();
+
+  var self = this;
+  keys = makeArray(keys);
+
+  transaction.push(function(){
+    if(self._buckets[bucket]){
+      for(var i=0, len=keys.length;i&lt;len;i++){
+        delete self._buckets[bucket][keys[i]];
+      }
+    }
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.end" id="apidoc.element.acl.memoryBackend.prototype.end">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>end
+        <span class="apidocSignatureSpan">(transaction, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (transaction, cb){
+  contract(arguments).params('array', 'function').end();
+
+  // Execute transaction
+  for(var i=0, len=transaction.length;i&lt;len;i++){
+    transaction[i]();
+  }
+  cb();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // returns a transaction object
+},
+
+/**
+   Ends a transaction (and executes it)
+*/
+end : function(transaction, cb){
+  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
+  // Execute transaction
+},
+
+/**
+  Cleans the whole storage.
+*/
+clean : function(cb){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.get" id="apidoc.element.acl.memoryBackend.prototype.get">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>get
+        <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (bucket, key, cb){
+  contract(arguments)
+      .params('string', 'string|number', 'function')
+      .end();
+
+  if(this._buckets[bucket]){
+    cb(null, this._buckets[bucket][key] || []);
+  }else{
+    cb(null, []);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.remove" id="apidoc.element.acl.memoryBackend.prototype.remove">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>remove
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('array', 'string', 'string|number','string|array|number')
+      .end();
+
+  var self = this;
+  values = makeArray(values);
+  transaction.push(function(){
+    var old;
+    if(self._buckets[bucket] &amp;&amp; (old = self._buckets[bucket][key])){
+      self._buckets[bucket][key] = _.difference(old, values);
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.union" id="apidoc.element.acl.memoryBackend.prototype.union">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>union
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union = function (bucket, keys, cb){
+  contract(arguments)
+    .params('string', 'array', 'function')
+    .end();
+
+  var match;
+  var re;
+  if (!this._buckets[bucket]) {
+    Object.keys(this._buckets).some(function(b) {
+      re = new RegExp("^"+b+"$");
+      match = re.test(bucket);
+      if (match) bucket = b;
+      return match;
+    });
+  }
+
+  if(this._buckets[bucket]){
+    var keyArrays = [];
+    for(var i=0,len=keys.length;i&lt;len;i++){
+      if(this._buckets[bucket][keys[i]]){
+        keyArrays.push.apply(keyArrays, this._buckets[bucket][keys[i]]);
+      }
+    }
+    cb(undefined, _.union(keyArrays));
+  }else{
+    cb(undefined, []);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.memoryBackend.prototype.unions" id="apidoc.element.acl.memoryBackend.prototype.unions">
+        function <span class="apidocSignatureSpan">acl.memoryBackend.prototype.</span>unions
+        <span class="apidocSignatureSpan">(buckets, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unions = function (buckets, keys, cb){
+  contract(arguments)
+      .params('array', 'array', 'function')
+      .end();
+
+  var self = this;
+  var results = {};
+
+  buckets.forEach(function(bucket) {
+    if(self._buckets[bucket]){
+      results[bucket] = _.uniq(_.flatten(_.values(_.pick(self._buckets[bucket], keys))));
+    }else{
+      results[bucket] = [];
+    }
+  });
+
+  cb(null, results);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.mongodbBackend" id="apidoc.module.acl.mongodbBackend">module acl.mongodbBackend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.mongodbBackend" id="apidoc.element.acl.mongodbBackend.mongodbBackend">
+        function <span class="apidocSignatureSpan">acl.</span>mongodbBackend
+        <span class="apidocSignatureSpan">(db, prefix, useSingle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MongoDBBackend(db, prefix, useSingle){
+  this.db = db;
+  this.prefix = typeof prefix !== 'undefined' ? prefix : '';
+  this.useSingle = (typeof useSingle !== 'undefined') ? useSingle : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Using redis backend
+acl = new acl(new acl.redisBackend(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.memoryBackend());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">mongodbBackend</span>(dbInstance, prefix));
+```
+
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+
+Create roles implicitly by giving them permissions:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.mongodbBackend.prototype" id="apidoc.module.acl.mongodbBackend.prototype">module acl.mongodbBackend.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.add" id="apidoc.element.acl.mongodbBackend.prototype.add">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>add
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('array', 'string', 'string|number','string|array|number')
+      .end();
+
+  if(key=="key") throw new Error("Key name 'key' is not allowed.");
+  key = encodeText(key);
+  var self=this;
+  var updateParams = (self.useSingle? {_bucketname: bucket, key:key} : {key:key});
+  var collName = (self.useSingle? aclCollectionName : bucket);
+
+  transaction.push(function(cb){
+    values = makeArray(values);
+    self.db.collection(self.prefix + collName, function(err,collection){
+      if(err instanceof Error) return cb(err);
+
+      // build doc from array values
+      var doc = {};
+      values.forEach(function(value){doc[value]=true;});
+
+      // update document
+      collection.update(updateParams,{$set:doc},{safe:true,upsert:true},function(err){
+        if(err instanceof Error) return cb(err);
+        cb(undefined);
+      });
+    });
+  });
+
+  transaction.push(function(cb) {
+    self.db.collection(self.prefix + collName, function(err,collection){
+      // Create index
+      collection.ensureIndex({_bucketname: 1, key: 1}, function(err){
+        if (err instanceof Error) {
+          return cb(err);
+        } else{
+          cb(undefined);
+        }
+      });
+    });
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.begin" id="apidoc.element.acl.mongodbBackend.prototype.begin">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">begin = function (){
+  // returns a transaction object(just an array of functions will do here.)
+  return [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.clean" id="apidoc.element.acl.mongodbBackend.prototype.clean">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>clean
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clean = function (cb){
+  contract(arguments).params('function').end();
+  this.db.collections(function(err, collections) {
+    if (err instanceof Error) return cb(err);
+    async.forEach(collections,function(coll,innercb){
+      coll.drop(function(){innercb()}); // ignores errors
+    },cb);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.del" id="apidoc.element.acl.mongodbBackend.prototype.del">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>del
+        <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (transaction, bucket, keys){
+  contract(arguments)
+      .params('array', 'string', 'string|array')
+      .end();
+  keys = makeArray(keys);
+  var self= this;
+  var updateParams = (self.useSingle? {_bucketname: bucket, key:{$in:keys}} : {key:{$in:keys}});
+  var collName = (self.useSingle? aclCollectionName : bucket);
+
+  transaction.push(function(cb){
+    self.db.collection(self.prefix + collName,function(err,collection){
+      if(err instanceof Error) return cb(err);
+      collection.remove(updateParams,{safe:true},function(err){
+        if(err instanceof Error) return cb(err);
+        cb(undefined);
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.end" id="apidoc.element.acl.mongodbBackend.prototype.end">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>end
+        <span class="apidocSignatureSpan">(transaction, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (transaction, cb){
+  contract(arguments).params('array', 'function').end();
+  async.series(transaction,function(err){
+    cb(err instanceof Error? err : undefined);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // returns a transaction object
+},
+
+/**
+   Ends a transaction (and executes it)
+*/
+end : function(transaction, cb){
+  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
+  // Execute transaction
+},
+
+/**
+  Cleans the whole storage.
+*/
+clean : function(cb){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.get" id="apidoc.element.acl.mongodbBackend.prototype.get">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>get
+        <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (bucket, key, cb){
+  contract(arguments)
+      .params('string', 'string|number', 'function')
+      .end();
+  key = encodeText(key);
+  var searchParams = (this.useSingle? {_bucketname: bucket, key:key} : {key:key});
+  var collName = (this.useSingle? aclCollectionName : bucket);
+
+  this.db.collection(this.prefix + collName,function(err,collection){
+    if(err instanceof Error) return cb(err);
+    // Excluding bucket field from search result
+    collection.findOne(searchParams, {_bucketname: 0},function(err, doc){
+      if(err) return cb(err);
+      if(! _.isObject(doc) ) return cb(undefined,[]);
+      doc = fixKeys(doc);
+      cb(undefined,_.without(_.keys(doc),"key","_id"));
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.remove" id="apidoc.element.acl.mongodbBackend.prototype.remove">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>remove
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('array', 'string', 'string|number','string|array|number')
+      .end();
+  key = encodeText(key);
+  var self=this;
+  var updateParams = (self.useSingle? {_bucketname: bucket, key:key} : {key:key});
+  var collName = (self.useSingle? aclCollectionName : bucket);
+
+  values = makeArray(values);
+  transaction.push(function(cb){
+    self.db.collection(self.prefix + collName,function(err,collection){
+      if(err instanceof Error) return cb(err);
+
+      // build doc from array values
+      var doc = {};
+      values.forEach(function(value){doc[value]=true;});
+
+      // update document
+      collection.update(updateParams,{$unset:doc},{safe:true,upsert:true},function(err){
+        if(err instanceof Error) return cb(err);
+        cb(undefined);
+      });
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.mongodbBackend.prototype.union" id="apidoc.element.acl.mongodbBackend.prototype.union">
+        function <span class="apidocSignatureSpan">acl.mongodbBackend.prototype.</span>union
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union = function (bucket, keys, cb){
+  contract(arguments)
+    .params('string', 'array', 'function')
+    .end();
+  keys = encodeAll(keys);
+  var searchParams = (this.useSingle? {_bucketname: bucket, key: { $in: keys }} : {key: { $in: keys }});
+  var collName = (this.useSingle? aclCollectionName : bucket);
+
+  this.db.collection(this.prefix + collName,function(err,collection){
+    if(err instanceof Error) return cb(err);
+    // Excluding bucket field from search result
+    collection.find(searchParams, {_bucketname: 0}).toArray(function(err,docs){
+      if(err instanceof Error) return cb(err);
+      if( ! docs.length ) return cb(undefined, []);
+      var keyArrays = [];
+      docs = fixAllKeys(docs);
+      docs.forEach(function(doc){
+        keyArrays.push.apply(keyArrays, _.keys(doc));
+      });
+      cb(undefined, _.without(_.union(keyArrays),"key","_id"));
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.redisBackend" id="apidoc.module.acl.redisBackend">module acl.redisBackend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.redisBackend" id="apidoc.element.acl.redisBackend.redisBackend">
+        function <span class="apidocSignatureSpan">acl.</span>redisBackend
+        <span class="apidocSignatureSpan">(redis, prefix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RedisBackend(redis, prefix){
+  this.redis = redis;
+  this.prefix = prefix || 'acl';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Create your acl module by requiring it and instantiating it with a valid backend instance:
+
+```javascript
+var acl = require('acl');
+
+// Using redis backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">redisBackend</span>(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.memoryBackend());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.redisBackend.prototype" id="apidoc.module.acl.redisBackend.prototype">module acl.redisBackend.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.add" id="apidoc.element.acl.redisBackend.prototype.add">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>add
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (transaction, bucket, key, values){
+		contract(arguments)
+	      .params('object', 'string', 'string|number','string|array|number')
+        .end();
+
+    key = this.bucketKey(bucket, key);
+
+    if (Array.isArray(values)){
+      values.forEach(function(value){
+        transaction.sadd(key, value);
+      });
+    }else{
+      transaction.sadd(key, values);
+    }
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.begin" id="apidoc.element.acl.redisBackend.prototype.begin">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">begin = function (){
+  return this.redis.multi();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.bucketKey" id="apidoc.element.acl.redisBackend.prototype.bucketKey">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>bucketKey
+        <span class="apidocSignatureSpan">(bucket, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">bucketKey = function (bucket, keys){
+  var self = this;
+  if(Array.isArray(keys)){
+    return keys.map(function(key){
+      return self.prefix+'_'+bucket+'@'+key;
+    });
+  }else{
+    return self.prefix+'_'+bucket+'@'+keys;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.clean" id="apidoc.element.acl.redisBackend.prototype.clean">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>clean
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clean = function (cb){
+  contract(arguments).params('function').end();
+  var self = this;
+  self.redis.keys(self.prefix+'*', function(err, keys){
+    if(keys.length){
+      self.redis.del(keys, function(){cb()});
+    }else{
+      cb();
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.del" id="apidoc.element.acl.redisBackend.prototype.del">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>del
+        <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (transaction, bucket, keys){
+		contract(arguments)
+	      .params('object', 'string', 'string|array')
+	      .end();
+
+  var self = this;
+
+  keys = Array.isArray(keys) ? keys : [keys]
+
+  keys = keys.map(function(key){
+    return self.bucketKey(bucket, key);
+  });
+
+  transaction.del(keys);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.end" id="apidoc.element.acl.redisBackend.prototype.end">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>end
+        <span class="apidocSignatureSpan">(transaction, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (transaction, cb){
+		contract(arguments).params('object', 'function').end();
+  transaction.exec(function(){cb()});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  // returns a transaction object
+},
+
+/**
+   Ends a transaction (and executes it)
+*/
+end : function(transaction, cb){
+  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
+  // Execute transaction
+},
+
+/**
+  Cleans the whole storage.
+*/
+clean : function(cb){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.get" id="apidoc.element.acl.redisBackend.prototype.get">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>get
+        <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (bucket, key, cb){
+		contract(arguments)
+	      .params('string', 'string|number', 'function')
+	      .end();
+
+  key = this.bucketKey(bucket, key);
+
+  this.redis.smembers(key, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.remove" id="apidoc.element.acl.redisBackend.prototype.remove">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>remove
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (transaction, bucket, key, values){
+		contract(arguments)
+	      .params('object', 'string', 'string|number','string|array|number')
+      .end();
+
+  key = this.bucketKey(bucket, key);
+
+  if (Array.isArray(values)){
+    values.forEach(function(value){
+      transaction.srem(key, value);
+    });
+  }else{
+    transaction.srem(key, values);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.union" id="apidoc.element.acl.redisBackend.prototype.union">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>union
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union = function (bucket, keys, cb){
+		contract(arguments)
+	      .params('string', 'array', 'function')
+	      .end();
+
+    keys = this.bucketKey(bucket, keys);
+    this.redis.sunion(keys, cb);
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.redisBackend.prototype.unions" id="apidoc.element.acl.redisBackend.prototype.unions">
+        function <span class="apidocSignatureSpan">acl.redisBackend.prototype.</span>unions
+        <span class="apidocSignatureSpan">(buckets, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unions = function (buckets, keys, cb){
+  contract(arguments)
+    .params('array', 'array', 'function')
+    .end();
+
+  var redisKeys = {};
+  var batch = this.redis.batch();
+  var self = this;
+
+  buckets.forEach(function(bucket) {
+    redisKeys[bucket] = self.bucketKey(bucket, keys);
+    batch.sunion(redisKeys[bucket], noop);
+  });
+
+  batch.exec(function(err, replies) {
+    if (!Array.isArray(replies)) {
+      return {};
+    }
+
+    var result = {};
+    replies.forEach(function(reply, index) {
+      if (reply instanceof Error) {
+        throw reply;
+      }
+
+      result[buckets[index]] = reply;
+    });
+    cb(err, result);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
