@@ -56,9 +56,9 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.acl.contract">
-            function <span class="apidocSignatureSpan">acl.</span>contract
-            <span class="apidocSignatureSpan">(args)</span>
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl">
+            function <span class="apidocSignatureSpan"></span>acl
+            <span class="apidocSignatureSpan">(backend, logger, options)</span>
             </a>
 
         </li>
@@ -92,7 +92,10 @@
 
         <li>
 
-            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>backend</span>
+            <a class="apidocElementLiA" href="#apidoc.element.acl.toString">
+            function <span class="apidocSignatureSpan">acl.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
 
         </li>
 
@@ -111,128 +114,6 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>redisBackend.prototype</span>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.acl.backend">module acl.backend</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.add">
-            function <span class="apidocSignatureSpan">acl.backend.</span>add
-            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.begin">
-            function <span class="apidocSignatureSpan">acl.backend.</span>begin
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.clean">
-            function <span class="apidocSignatureSpan">acl.backend.</span>clean
-            <span class="apidocSignatureSpan">(cb)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.del">
-            function <span class="apidocSignatureSpan">acl.backend.</span>del
-            <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.end">
-            function <span class="apidocSignatureSpan">acl.backend.</span>end
-            <span class="apidocSignatureSpan">(transaction, cb)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.get">
-            function <span class="apidocSignatureSpan">acl.backend.</span>get
-            <span class="apidocSignatureSpan">(bucket, key, cb)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.remove">
-            function <span class="apidocSignatureSpan">acl.backend.</span>remove
-            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.union">
-            function <span class="apidocSignatureSpan">acl.backend.</span>union
-            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.unions">
-            function <span class="apidocSignatureSpan">acl.backend.</span>unions
-            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.acl.contract">module acl.contract</a><ol>
-
-        <li>
-
-            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">acl.contract.</span>debug</span>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.contract">
-            function <span class="apidocSignatureSpan">acl.</span>contract
-            <span class="apidocSignatureSpan">(args)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.end">
-            function <span class="apidocSignatureSpan">acl.contract.</span>end
-            <span class="apidocSignatureSpan">()</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.params">
-            function <span class="apidocSignatureSpan">acl.contract.</span>params
-            <span class="apidocSignatureSpan">()</span>
-            </a>
 
         </li>
 
@@ -539,20 +420,41 @@
 
 
     <h2>
-        <a href="#apidoc.element.acl.contract" id="apidoc.element.acl.contract">
-        function <span class="apidocSignatureSpan">acl.</span>contract
-        <span class="apidocSignatureSpan">(args)</span>
+        <a href="#apidoc.element.acl.acl" id="apidoc.element.acl.acl">
+        function <span class="apidocSignatureSpan"></span>acl
+        <span class="apidocSignatureSpan">(backend, logger, options)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">contract = function (args){
-  if(contract.debug===true){
-    contract.fulfilled = false;
-    contract.args = _.toArray(args);
-    contract.checkedParams = [];
-    return contract;
-  }else{
-    return noop;
+    <li>description and source-code<pre class="apidocCodePre">acl = function (backend, logger, options){
+  contract(arguments)
+    .params('object')
+    .params('object','object')
+    .params('object','object', 'object')
+    .end();
+
+  options = _.extend({
+    buckets: {
+      meta: 'meta',
+      parents: 'parents',
+      permissions: 'permissions',
+      resources: 'resources',
+      roles: 'roles',
+      users: 'users'
+    }
+  }, options);
+
+  this.logger = logger;
+  this.backend = backend;
+  this.options = options;
+
+  // Promisify async methods
+  backend.endAsync = bluebird.promisify(backend.end);
+  backend.getAsync = bluebird.promisify(backend.get);
+  backend.cleanAsync = bluebird.promisify(backend.clean);
+  backend.unionAsync = bluebird.promisify(backend.union);
+  if (backend.unions) {
+    backend.unionsAsync = bluebird.promisify(backend.unions);
   }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
@@ -655,281 +557,24 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
 
 
 
-
-
-
-
-
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.acl.backend" id="apidoc.module.acl.backend">module acl.backend</a></h1>
-
-
     <h2>
-        <a href="#apidoc.element.acl.backend.add" id="apidoc.element.acl.backend.add">
-        function <span class="apidocSignatureSpan">acl.backend.</span>add
-        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">add = function (transaction, bucket, key, values){
-  contract(arguments)
-      .params('object', 'string', 'string|number','string|array|number')
-      .end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.backend.begin" id="apidoc.element.acl.backend.begin">
-        function <span class="apidocSignatureSpan">acl.backend.</span>begin
+        <a href="#apidoc.element.acl.toString" id="apidoc.element.acl.toString">
+        function <span class="apidocSignatureSpan">acl.</span>toString
         <span class="apidocSignatureSpan">()</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">begin = function (){
-  // returns a transaction object
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return toString;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
 
-    <h2>
-        <a href="#apidoc.element.acl.backend.clean" id="apidoc.element.acl.backend.clean">
-        function <span class="apidocSignatureSpan">acl.backend.</span>clean
-        <span class="apidocSignatureSpan">(cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">clean = function (cb){
-  contract(arguments).params('function').end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
 
 
 
-    <h2>
-        <a href="#apidoc.element.acl.backend.del" id="apidoc.element.acl.backend.del">
-        function <span class="apidocSignatureSpan">acl.backend.</span>del
-        <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">del = function (transaction, bucket, keys){
-  contract(arguments)
-      .params('object', 'string', 'string|array')
-      .end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.backend.end" id="apidoc.element.acl.backend.end">
-        function <span class="apidocSignatureSpan">acl.backend.</span>end
-        <span class="apidocSignatureSpan">(transaction, cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">end = function (transaction, cb){
-  contract(arguments).params('object', 'function').end();
-  // Execute transaction
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  // returns a transaction object
-},
-
-/**
-   Ends a transaction (and executes it)
-*/
-end : function(transaction, cb){
-  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
-  // Execute transaction
-},
-
-/**
-  Cleans the whole storage.
-*/
-clean : function(cb){
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.backend.get" id="apidoc.element.acl.backend.get">
-        function <span class="apidocSignatureSpan">acl.backend.</span>get
-        <span class="apidocSignatureSpan">(bucket, key, cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">get = function (bucket, key, cb){
-  contract(arguments)
-      .params('string', 'string|number', 'function')
-      .end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.backend.remove" id="apidoc.element.acl.backend.remove">
-        function <span class="apidocSignatureSpan">acl.backend.</span>remove
-        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">remove = function (transaction, bucket, key, values){
-  contract(arguments)
-      .params('object', 'string', 'string|number','string|array|number')
-      .end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.backend.union" id="apidoc.element.acl.backend.union">
-        function <span class="apidocSignatureSpan">acl.backend.</span>union
-        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">union = function (bucket, keys, cb){
-  contract(arguments)
-    .params('string', 'array', 'function')
-    .end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.backend.unions" id="apidoc.element.acl.backend.unions">
-        function <span class="apidocSignatureSpan">acl.backend.</span>unions
-        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">unions = function (bucket, keys, cb){
-  contract(arguments)
-      .params('array', 'array', 'function')
-      .end();
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.acl.contract" id="apidoc.module.acl.contract">module acl.contract</a></h1>
-
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.contract.contract" id="apidoc.element.acl.contract.contract">
-        function <span class="apidocSignatureSpan">acl.</span>contract
-        <span class="apidocSignatureSpan">(args)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">contract = function (args){
-  if(contract.debug===true){
-    contract.fulfilled = false;
-    contract.args = _.toArray(args);
-    contract.checkedParams = [];
-    return contract;
-  }else{
-    return noop;
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.contract.end" id="apidoc.element.acl.contract.end">
-        function <span class="apidocSignatureSpan">acl.contract.</span>end
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">end = function (){
-  if(!this.fulfilled){
-    printParamsError(this.args, this.checkedParams);
-    throw new Error('Broke parameter contract');
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  // returns a transaction object
-},
-
-/**
-   Ends a transaction (and executes it)
-*/
-end : function(transaction, cb){
-  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
-  // Execute transaction
-},
-
-/**
-  Cleans the whole storage.
-*/
-clean : function(cb){
-...</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.acl.contract.params" id="apidoc.element.acl.contract.params">
-        function <span class="apidocSignatureSpan">acl.contract.</span>params
-        <span class="apidocSignatureSpan">()</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">params = function (){
-  var i, len;
-  this.fulfilled |= checkParams(this.args, _.toArray(arguments));
-  if(this.fulfilled){
-    return noop;
-  }else{
-    this.checkedParams.push(arguments);
-    return this;
-  }
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  // returns a transaction object
-},
-
-/**
-   Ends a transaction (and executes it)
-*/
-end : function(transaction, cb){
-  contract(arguments).<span class="apidocCodeKeywordSpan">params</span>('object', 'function').end();
-  // Execute transaction
-},
-
-/**
-  Cleans the whole storage.
-*/
-clean : function(cb){
-...</pre></li>
-    </ul>
 
 
 </div>
@@ -1082,23 +727,7 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
   }
   cb();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  // returns a transaction object
-},
-
-/**
-   Ends a transaction (and executes it)
-*/
-end : function(transaction, cb){
-  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
-  // Execute transaction
-},
-
-/**
-  Cleans the whole storage.
-*/
-clean : function(cb){
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1398,23 +1027,7 @@ Create roles implicitly by giving them permissions:
     cb(err instanceof Error? err : undefined);
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  // returns a transaction object
-},
-
-/**
-   Ends a transaction (and executes it)
-*/
-end : function(transaction, cb){
-  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
-  // Execute transaction
-},
-
-/**
-  Cleans the whole storage.
-*/
-clean : function(cb){
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
@@ -1690,23 +1303,7 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
 		contract(arguments).params('object', 'function').end();
   transaction.exec(function(){cb()});
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">...
-  // returns a transaction object
-},
-
-/**
-   Ends a transaction (and executes it)
-*/
-end : function(transaction, cb){
-  contract(arguments).params('object', 'function').<span class="apidocCodeKeywordSpan">end</span>();
-  // Execute transaction
-},
-
-/**
-  Cleans the whole storage.
-*/
-clean : function(cb){
-...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 

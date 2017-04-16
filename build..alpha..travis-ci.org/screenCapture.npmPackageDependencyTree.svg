@@ -1,28 +1,31 @@
-<svg height="398" width="720" xmlns="http://www.w3.org/2000/svg">
-<rect height="398" fill="#555" width="720"></rect>
+<svg height="446" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="446" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">└─┬ acl@0.4.10 </tspan>
-<tspan x="10" y="42">  ├── async@2.3.0 </tspan>
-<tspan x="10" y="58">  ├── bluebird@3.5.0 </tspan>
-<tspan x="10" y="74">  ├── lodash@4.17.4 </tspan>
-<tspan x="10" y="90">  ├─┬ mongodb@2.2.25 </tspan>
-<tspan x="10" y="106">  │ ├── es6-promise@3.2.1 </tspan>
-<tspan x="10" y="122">  │ ├─┬ mongodb-core@2.1.9 </tspan>
-<tspan x="10" y="138">  │ │ ├── bson@1.0.4 </tspan>
-<tspan x="10" y="154">  │ │ └─┬ require_optional@1.0.0 </tspan>
-<tspan x="10" y="170">  │ │   ├── resolve-from@2.0.0 </tspan>
-<tspan x="10" y="186">  │ │   └── semver@5.3.0 </tspan>
-<tspan x="10" y="202">  │ └─┬ readable-stream@2.1.5 </tspan>
-<tspan x="10" y="218">  │   ├── buffer-shims@1.0.0 </tspan>
-<tspan x="10" y="234">  │   ├── core-util-is@1.0.2 </tspan>
-<tspan x="10" y="250">  │   ├── inherits@2.0.3 </tspan>
-<tspan x="10" y="266">  │   ├── isarray@1.0.0 </tspan>
-<tspan x="10" y="282">  │   ├── process-nextick-args@1.0.7 </tspan>
-<tspan x="10" y="298">  │   ├── string_decoder@0.10.31 </tspan>
-<tspan x="10" y="314">  │   └── util-deprecate@1.0.2 </tspan>
-<tspan x="10" y="330">  └─┬ redis@2.7.1 </tspan>
-<tspan x="10" y="346">    ├── double-ended-queue@2.1.0-0 </tspan>
-<tspan x="10" y="362">    ├── redis-commands@1.3.1 </tspan>
-<tspan x="10" y="378">    └── redis-parser@2.5.0</tspan>
+<tspan x="10" y="26">11 megabytes installed</tspan>
+<tspan x="10" y="42"></tspan>
+<tspan x="10" y="58">node_modules</tspan>
+<tspan x="10" y="74">└─┬ acl@0.4.10 </tspan>
+<tspan x="10" y="90">  ├── async@2.3.0 </tspan>
+<tspan x="10" y="106">  ├── bluebird@3.5.0 </tspan>
+<tspan x="10" y="122">  ├── lodash@4.17.4 </tspan>
+<tspan x="10" y="138">  ├─┬ mongodb@2.2.25 </tspan>
+<tspan x="10" y="154">  │ ├── es6-promise@3.2.1 </tspan>
+<tspan x="10" y="170">  │ ├─┬ mongodb-core@2.1.9 </tspan>
+<tspan x="10" y="186">  │ │ ├── bson@1.0.4 </tspan>
+<tspan x="10" y="202">  │ │ └─┬ require_optional@1.0.0 </tspan>
+<tspan x="10" y="218">  │ │   ├── resolve-from@2.0.0 </tspan>
+<tspan x="10" y="234">  │ │   └── semver@5.3.0 </tspan>
+<tspan x="10" y="250">  │ └─┬ readable-stream@2.1.5 </tspan>
+<tspan x="10" y="266">  │   ├── buffer-shims@1.0.0 </tspan>
+<tspan x="10" y="282">  │   ├── core-util-is@1.0.2 </tspan>
+<tspan x="10" y="298">  │   ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="314">  │   ├── isarray@1.0.0 </tspan>
+<tspan x="10" y="330">  │   ├── process-nextick-args@1.0.7 </tspan>
+<tspan x="10" y="346">  │   ├── string_decoder@0.10.31 </tspan>
+<tspan x="10" y="362">  │   └── util-deprecate@1.0.2 </tspan>
+<tspan x="10" y="378">  └─┬ redis@2.7.1 </tspan>
+<tspan x="10" y="394">    ├── double-ended-queue@2.1.0-0 </tspan>
+<tspan x="10" y="410">    ├── redis-commands@1.3.1 </tspan>
+<tspan x="10" y="426">    └── redis-parser@2.6.0</tspan>
 </text>
 </svg>
