@@ -8,20 +8,20 @@
 <tspan x="10" y="90">  ├── async@2.3.0 </tspan>
 <tspan x="10" y="106">  ├── bluebird@3.5.0 </tspan>
 <tspan x="10" y="122">  ├── lodash@4.17.4 </tspan>
-<tspan x="10" y="138">  ├─┬ mongodb@2.2.25 </tspan>
+<tspan x="10" y="138">  ├─┬ mongodb@2.2.26 </tspan>
 <tspan x="10" y="154">  │ ├── es6-promise@3.2.1 </tspan>
-<tspan x="10" y="170">  │ ├─┬ mongodb-core@2.1.9 </tspan>
+<tspan x="10" y="170">  │ ├─┬ mongodb-core@2.1.10 </tspan>
 <tspan x="10" y="186">  │ │ ├── bson@1.0.4 </tspan>
 <tspan x="10" y="202">  │ │ └─┬ require_optional@1.0.0 </tspan>
 <tspan x="10" y="218">  │ │   ├── resolve-from@2.0.0 </tspan>
 <tspan x="10" y="234">  │ │   └── semver@5.3.0 </tspan>
-<tspan x="10" y="250">  │ └─┬ readable-stream@2.1.5 </tspan>
+<tspan x="10" y="250">  │ └─┬ readable-stream@2.2.7 </tspan>
 <tspan x="10" y="266">  │   ├── buffer-shims@1.0.0 </tspan>
 <tspan x="10" y="282">  │   ├── core-util-is@1.0.2 </tspan>
 <tspan x="10" y="298">  │   ├── inherits@2.0.3 </tspan>
 <tspan x="10" y="314">  │   ├── isarray@1.0.0 </tspan>
 <tspan x="10" y="330">  │   ├── process-nextick-args@1.0.7 </tspan>
-<tspan x="10" y="346">  │   ├── string_decoder@0.10.31 </tspan>
+<tspan x="10" y="346">  │   ├── string_decoder@1.0.0 </tspan>
 <tspan x="10" y="362">  │   └── util-deprecate@1.0.2 </tspan>
 <tspan x="10" y="378">  └─┬ redis@2.7.1 </tspan>
 <tspan x="10" y="394">    ├── double-ended-queue@2.1.0-0 </tspan>

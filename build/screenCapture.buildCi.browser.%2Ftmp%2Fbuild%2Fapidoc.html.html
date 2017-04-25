@@ -65,6 +65,24 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.middleware">
+            function <span class="apidocSignatureSpan">acl.</span>acl.prototype.middleware
+            <span class="apidocSignatureSpan">(numPathComponents, userId, actions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract">
+            function <span class="apidocSignatureSpan">acl.</span>contract
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.acl.memoryBackend">
             function <span class="apidocSignatureSpan">acl.</span>memoryBackend
             <span class="apidocSignatureSpan">()</span>
@@ -92,10 +110,13 @@
 
         <li>
 
-            <a class="apidocElementLiA" href="#apidoc.element.acl.toString">
-            function <span class="apidocSignatureSpan">acl.</span>toString
-            <span class="apidocSignatureSpan">()</span>
-            </a>
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>acl.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>backend</span>
 
         </li>
 
@@ -114,6 +135,428 @@
         <li>
 
             <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">acl.</span>redisBackend.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.acl">module acl.acl</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.acl">
+            function <span class="apidocSignatureSpan">acl.</span>acl
+            <span class="apidocSignatureSpan">(backend, logger, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.memoryBackend">
+            function <span class="apidocSignatureSpan">acl.acl.</span>memoryBackend
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.mongodbBackend">
+            function <span class="apidocSignatureSpan">acl.acl.</span>mongodbBackend
+            <span class="apidocSignatureSpan">(db, prefix, useSingle)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.redisBackend">
+            function <span class="apidocSignatureSpan">acl.acl.</span>redisBackend
+            <span class="apidocSignatureSpan">(redis, prefix)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.acl.prototype">module acl.acl.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._allRoles">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_allRoles
+            <span class="apidocSignatureSpan">(roleNames)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._allUserRoles">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_allUserRoles
+            <span class="apidocSignatureSpan">(userId)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._allowEx">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_allowEx
+            <span class="apidocSignatureSpan">(objs)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._checkPermissions">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_checkPermissions
+            <span class="apidocSignatureSpan">(roles, resource, permissions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._resourcePermissions">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_resourcePermissions
+            <span class="apidocSignatureSpan">(roles, resource)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._rolesParents">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_rolesParents
+            <span class="apidocSignatureSpan">(roles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype._rolesResources">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_rolesResources
+            <span class="apidocSignatureSpan">(roles)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.addRoleParents">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>addRoleParents
+            <span class="apidocSignatureSpan">(role, parents, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.addUserRoles">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>addUserRoles
+            <span class="apidocSignatureSpan">(userId, roles, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.allow">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>allow
+            <span class="apidocSignatureSpan">(roles, resources, permissions, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.allowedPermissions">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>allowedPermissions
+            <span class="apidocSignatureSpan">(userId, resources, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.areAnyRolesAllowed">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>areAnyRolesAllowed
+            <span class="apidocSignatureSpan">(roles, resource, permissions, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.hasRole">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>hasRole
+            <span class="apidocSignatureSpan">(userId, rolename, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.isAllowed">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>isAllowed
+            <span class="apidocSignatureSpan">(userId, resource, permissions, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.middleware">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>middleware
+            <span class="apidocSignatureSpan">(numPathComponents, userId, actions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.optimizedAllowedPermissions">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>optimizedAllowedPermissions
+            <span class="apidocSignatureSpan">(userId, resources, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.permittedResources">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>permittedResources
+            <span class="apidocSignatureSpan">(roles, permissions, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.removeAllow">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeAllow
+            <span class="apidocSignatureSpan">(role, resources, permissions, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.removePermissions">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removePermissions
+            <span class="apidocSignatureSpan">(role, resources, permissions, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.removeResource">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeResource
+            <span class="apidocSignatureSpan">(resource, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.removeRole">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeRole
+            <span class="apidocSignatureSpan">(role, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.removeRoleParents">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeRoleParents
+            <span class="apidocSignatureSpan">(role, parents, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.removeUserRoles">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeUserRoles
+            <span class="apidocSignatureSpan">(userId, roles, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.roleUsers">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>roleUsers
+            <span class="apidocSignatureSpan">(roleName, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.userRoles">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>userRoles
+            <span class="apidocSignatureSpan">(userId, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.whatResources">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>whatResources
+            <span class="apidocSignatureSpan">(roles, permissions, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.acl.prototype.middleware">module acl.acl.prototype.middleware</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.middleware.middleware">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.</span>middleware
+            <span class="apidocSignatureSpan">(numPathComponents, userId, actions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.acl.prototype.middleware.errorHandler">
+            function <span class="apidocSignatureSpan">acl.acl.prototype.middleware.</span>errorHandler
+            <span class="apidocSignatureSpan">(contentType)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.backend">module acl.backend</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.add">
+            function <span class="apidocSignatureSpan">acl.backend.</span>add
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.begin">
+            function <span class="apidocSignatureSpan">acl.backend.</span>begin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.clean">
+            function <span class="apidocSignatureSpan">acl.backend.</span>clean
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.del">
+            function <span class="apidocSignatureSpan">acl.backend.</span>del
+            <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.end">
+            function <span class="apidocSignatureSpan">acl.backend.</span>end
+            <span class="apidocSignatureSpan">(transaction, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.get">
+            function <span class="apidocSignatureSpan">acl.backend.</span>get
+            <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.remove">
+            function <span class="apidocSignatureSpan">acl.backend.</span>remove
+            <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.union">
+            function <span class="apidocSignatureSpan">acl.backend.</span>union
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.backend.unions">
+            function <span class="apidocSignatureSpan">acl.backend.</span>unions
+            <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.acl.contract">module acl.contract</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">acl.contract.</span>debug</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.contract">
+            function <span class="apidocSignatureSpan">acl.</span>contract
+            <span class="apidocSignatureSpan">(args)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.end">
+            function <span class="apidocSignatureSpan">acl.contract.</span>end
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.acl.contract.params">
+            function <span class="apidocSignatureSpan">acl.contract.</span>params
+            <span class="apidocSignatureSpan">()</span>
+            </a>
 
         </li>
 
@@ -463,6 +906,117 @@
 
 
     <h2>
+        <a href="#apidoc.element.acl.acl.prototype.middleware" id="apidoc.element.acl.acl.prototype.middleware">
+        function <span class="apidocSignatureSpan">acl.</span>acl.prototype.middleware
+        <span class="apidocSignatureSpan">(numPathComponents, userId, actions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">acl.prototype.middleware = function (numPathComponents, userId, actions){
+  contract(arguments)
+    .params()
+    .params('number')
+    .params('number','string|number|function')
+    .params('number','string|number|function', 'string|array')
+    .end();
+
+  var acl = this;
+
+  function HttpError(errorCode, msg){
+    this.errorCode = errorCode;
+    this.message = msg;
+    this.name = this.constructor.name;
+
+    Error.captureStackTrace(this, this.constructor);
+    this.constructor.prototype.__proto__ = Error.prototype;
+  }
+
+  return function(req, res, next){
+    var _userId = userId,
+        _actions = actions,
+        resource,
+        url;
+
+    // call function to fetch userId
+    if(typeof userId === 'function'){
+      _userId = userId(req, res);
+    }
+    if (!userId) {
+      if((req.session) &amp;&amp; (req.session.userId)){
+        _userId = req.session.userId;
+      }else if((req.user) &amp;&amp; (req.user.id)){
+        _userId = req.user.id;
+      }else{
+        next(new HttpError(401, 'User not authenticated'));
+        return;
+      }
+    }
+
+    // Issue #80 - Additional check
+    if (!_userId) {
+      next(new HttpError(401, 'User not authenticated'));
+      return;
+    }
+
+    url = req.originalUrl.split('?')[0];
+    if(!numPathComponents){
+      resource = url;
+    }else{
+      resource = url.split('/').slice(0,numPathComponents+1).join('/');
+    }
+
+    if(!_actions){
+      _actions = req.method.toLowerCase();
+    }
+
+    acl.logger?acl.logger.debug('Requesting '+_actions+' on '+resource+' by user '+_userId):null;
+
+    acl.isAllowed(_userId, resource, _actions, function(err, allowed){
+      if (err){
+        next(new Error('Error checking permissions to access resource'));
+      }else if(allowed === false){
+        if (acl.logger) {
+          acl.logger.debug('Not allowed '+_actions+' on '+resource+' by user '+_userId);
+          acl.allowedPermissions(_userId, resource, function(err, obj){
+            acl.logger.debug('Allowed permissions: '+util.inspect(obj));
+          });
+        }
+        next(new HttpError(403,'Insufficient permissions to access resource'));
+      }else{
+        acl.logger?acl.logger.debug('Allowed '+_actions+' on '+resource+' by user '+_userId):null;
+        next();
+      }
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract" id="apidoc.element.acl.contract">
+        function <span class="apidocSignatureSpan">acl.</span>contract
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contract = function (args){
+  if(contract.debug===true){
+    contract.fulfilled = false;
+    contract.args = _.toArray(args);
+    contract.checkedParams = [];
+    return contract;
+  }else{
+    return noop;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
         <a href="#apidoc.element.acl.memoryBackend" id="apidoc.element.acl.memoryBackend">
         function <span class="apidocSignatureSpan">acl.</span>memoryBackend
         <span class="apidocSignatureSpan">()</span>
@@ -557,24 +1111,1928 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
 
 
 
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.acl" id="apidoc.module.acl.acl">module acl.acl</a></h1>
+
+
     <h2>
-        <a href="#apidoc.element.acl.toString" id="apidoc.element.acl.toString">
-        function <span class="apidocSignatureSpan">acl.</span>toString
-        <span class="apidocSignatureSpan">()</span>
+        <a href="#apidoc.element.acl.acl.acl" id="apidoc.element.acl.acl.acl">
+        function <span class="apidocSignatureSpan">acl.</span>acl
+        <span class="apidocSignatureSpan">(backend, logger, options)</span>
         </a>
     </h2>
     <ul>
-    <li>description and source-code<pre class="apidocCodePre">toString = function () {
-    return toString;
+    <li>description and source-code<pre class="apidocCodePre">acl = function (backend, logger, options){
+  contract(arguments)
+    .params('object')
+    .params('object','object')
+    .params('object','object', 'object')
+    .end();
+
+  options = _.extend({
+    buckets: {
+      meta: 'meta',
+      parents: 'parents',
+      permissions: 'permissions',
+      resources: 'resources',
+      roles: 'roles',
+      users: 'users'
+    }
+  }, options);
+
+  this.logger = logger;
+  this.backend = backend;
+  this.options = options;
+
+  // Promisify async methods
+  backend.endAsync = bluebird.promisify(backend.end);
+  backend.getAsync = bluebird.promisify(backend.get);
+  backend.cleanAsync = bluebird.promisify(backend.clean);
+  backend.unionAsync = bluebird.promisify(backend.union);
+  if (backend.unions) {
+    backend.unionsAsync = bluebird.promisify(backend.unions);
+  }
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
 
 
+    <h2>
+        <a href="#apidoc.element.acl.acl.memoryBackend" id="apidoc.element.acl.acl.memoryBackend">
+        function <span class="apidocSignatureSpan">acl.acl.</span>memoryBackend
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MemoryBackend(){
+  this._buckets = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+var acl = require('acl');
+
+// Using redis backend
+acl = new acl(new acl.redisBackend(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">memoryBackend</span>());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
+```
+
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+...</pre></li>
+    </ul>
 
 
 
+    <h2>
+        <a href="#apidoc.element.acl.acl.mongodbBackend" id="apidoc.element.acl.acl.mongodbBackend">
+        function <span class="apidocSignatureSpan">acl.acl.</span>mongodbBackend
+        <span class="apidocSignatureSpan">(db, prefix, useSingle)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function MongoDBBackend(db, prefix, useSingle){
+  this.db = db;
+  this.prefix = typeof prefix !== 'undefined' ? prefix : '';
+  this.useSingle = (typeof useSingle !== 'undefined') ? useSingle : false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Using redis backend
+acl = new acl(new acl.redisBackend(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.memoryBackend());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">mongodbBackend</span>(dbInstance, prefix));
+```
+
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+
+Create roles implicitly by giving them permissions:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.redisBackend" id="apidoc.element.acl.acl.redisBackend">
+        function <span class="apidocSignatureSpan">acl.acl.</span>redisBackend
+        <span class="apidocSignatureSpan">(redis, prefix)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RedisBackend(redis, prefix){
+  this.redis = redis;
+  this.prefix = prefix || 'acl';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Create your acl module by requiring it and instantiating it with a valid backend instance:
+
+```javascript
+var acl = require('acl');
+
+// Using redis backend
+acl = new acl(new acl.<span class="apidocCodeKeywordSpan">redisBackend</span>(redisClient, prefix));
+
+// Or Using the memory backend
+acl = new acl(new acl.memoryBackend());
+
+// Or Using the mongodb backend
+acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
+```
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.acl.prototype" id="apidoc.module.acl.acl.prototype">module acl.acl.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._allRoles" id="apidoc.element.acl.acl.prototype._allRoles">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_allRoles
+        <span class="apidocSignatureSpan">(roleNames)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_allRoles = function (roleNames){
+  var _this = this;
+
+  return this._rolesParents(roleNames).then(function(parents){
+    if(parents.length &gt; 0){
+      return _this._allRoles(parents).then(function(parentRoles){
+        return _.union(roleNames, parentRoles);
+      });
+    }else{
+      return roleNames;
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Return all roles in the hierarchy including the given roles.
+//
+Acl.prototype._allRoles = function(roleNames){
+  var _this = this;
+
+  return this._rolesParents(roleNames).then(function(parents){
+    if(parents.length &gt; 0){
+      return _this.<span class="apidocCodeKeywordSpan">_allRoles</span>(parents).then(function(parentRoles){
+        return _.union(roleNames, parentRoles);
+      });
+    }else{
+      return roleNames;
+    }
+  });
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._allUserRoles" id="apidoc.element.acl.acl.prototype._allUserRoles">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_allUserRoles
+        <span class="apidocSignatureSpan">(userId)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_allUserRoles = function (userId) {
+  var _this = this;
+
+  return this.userRoles(userId).then(function(roles) {
+    if (roles &amp;&amp; roles.length &gt; 0) {
+      return _this._allRoles(roles);
+    } else {
+      return [];
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  .params('string|number', 'string|array', 'function|undefined')
+  .params('string|number', 'string|array')
+  .end();
+
+resources = makeArray(resources);
+var self = this;
+
+return this.<span class="apidocCodeKeywordSpan">_allUserRoles</span>(userId).then(function(roles) {
+  var buckets = resources.map(allowsBucket);
+  if (roles.length === 0) {
+    var emptyResult = {};
+    buckets.forEach(function(bucket) {
+      emptyResult[bucket] = [];
+    });
+    return bluebird.resolve(emptyResult);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._allowEx" id="apidoc.element.acl.acl.prototype._allowEx">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_allowEx
+        <span class="apidocSignatureSpan">(objs)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_allowEx = function (objs){
+  var _this = this;
+  objs = makeArray(objs);
+
+  var demuxed = [];
+  objs.forEach(function(obj){
+    var roles = obj.roles;
+    obj.allows.forEach(function(allow){
+      demuxed.push({
+        roles:roles,
+        resources:allow.resources,
+        permissions:allow.permissions});
+    });
+  });
+
+  return bluebird.reduce(demuxed, function(values, obj){
+    return _this.allow(obj.roles, obj.resources, obj.permissions);
+  }, null);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+.params('string|array','string|array','string|array','function')
+.params('string|array','string|array','string|array')
+.params('array','function')
+.params('array')
+.end();
+
+  if((arguments.length == 1) || ((arguments.length===2)&amp;&amp;_.isObject(roles)&amp;&amp;_.isFunction(resources))){
+return this.<span class="apidocCodeKeywordSpan">_allowEx</span>(roles).nodeify(resources);
+  }else{
+var _this = this;
+
+roles = makeArray(roles);
+resources = makeArray(resources);
+
+var transaction = _this.backend.begin();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._checkPermissions" id="apidoc.element.acl.acl.prototype._checkPermissions">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_checkPermissions
+        <span class="apidocSignatureSpan">(roles, resource, permissions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_checkPermissions = function (roles, resource, permissions){
+  var _this = this;
+
+  return this.backend.unionAsync(allowsBucket(resource), roles).then(function(resourcePermissions){
+    if (resourcePermissions.indexOf('*') !== -1){
+      return true;
+    }else{
+      permissions = permissions.filter(function(p){
+        return resourcePermissions.indexOf(p) === -1;
+      });
+
+      if(permissions.length === 0){
+        return true;
+      }else{
+        return _this.backend.unionAsync(_this.options.buckets.parents, roles).then(function(parents){
+          if(parents &amp;&amp; parents.length){
+            return _this._checkPermissions(parents, resource, permissions);
+          }else{
+            return false;
+          }
+        });
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+roles = makeArray(roles);
+permissions = makeArray(permissions);
+
+if(roles.length===0){
+  return bluebird.resolve(false).nodeify(cb);
+}else{
+  return this.<span class="apidocCodeKeywordSpan">_checkPermissions</span>(roles, resource, permissions).nodeify(cb);
+}
+};
+
+/**
+whatResources(role, function(err, {resourceName: [permissions]})
+
+Returns what resources a given role or roles have permissions over.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._resourcePermissions" id="apidoc.element.acl.acl.prototype._resourcePermissions">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_resourcePermissions
+        <span class="apidocSignatureSpan">(roles, resource)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_resourcePermissions = function (roles, resource){
+  var _this = this;
+
+  if(roles.length===0){
+    return bluebird.resolve([]);
+  }else{
+    return this.backend.unionAsync(allowsBucket(resource), roles).then(function(resourcePermissions){
+      return _this._rolesParents(roles).then(function(parents){
+        if(parents &amp;&amp; parents.length){
+          return _this._resourcePermissions(parents, resource).then(function(morePermissions){
+            return _.union(resourcePermissions, morePermissions);
+          });
+        }else{
+          return resourcePermissions;
+        }
+      });
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  var _this = this;
+  resources = makeArray(resources);
+
+  return _this.userRoles(userId).then(function(roles){
+    var result = {};
+    return bluebird.all(resources.map(function(resource){
+      return _this.<span class="apidocCodeKeywordSpan">_resourcePermissions</span>(roles, resource).then(function(permissions){
+        result[resource] = permissions;
+      });
+    })).then(function(){
+      return result;
+    });
+  }).nodeify(cb);
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._rolesParents" id="apidoc.element.acl.acl.prototype._rolesParents">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_rolesParents
+        <span class="apidocSignatureSpan">(roles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_rolesParents = function (roles){
+  return this.backend.unionAsync(this.options.buckets.parents, roles);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+//
+// Return all roles in the hierarchy including the given roles.
+//
+/*
+Acl.prototype._allRoles = function(roleNames, cb){
+var _this = this, roles;
+
+_this.<span class="apidocCodeKeywordSpan">_rolesParents</span>(roleNames, function(err, parents){
+  roles = _.union(roleNames, parents);
+  async.whilst(
+    function (){
+      return parents.length &gt;0;
+    },
+    function (cb) {
+      _this._rolesParents(parents, function(err, result){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype._rolesResources" id="apidoc.element.acl.acl.prototype._rolesResources">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>_rolesResources
+        <span class="apidocSignatureSpan">(roles)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_rolesResources = function (roles){
+  var _this = this;
+  roles = makeArray(roles);
+
+  return this._allRoles(roles).then(function(allRoles){
+    var result = [];
+
+    // check if bluebird.map simplifies this code
+    return bluebird.all(allRoles.map(function(role){
+      return _this.backend.getAsync(_this.options.buckets.resources, role).then(function(resources){
+        result = result.concat(resources);
+      });
+    })).then(function(){
+      return result;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+return this.permittedResources(roles, permissions, cb);
+};
+
+Acl.prototype.permittedResources = function(roles, permissions, cb){
+var _this = this;
+var result = _.isUndefined(permissions) ? {} : [];
+return this.<span class="apidocCodeKeywordSpan">_rolesResources</span>(roles).then(function(resources){
+  return bluebird.all(resources.map(function(resource){
+    return _this._resourcePermissions(roles, resource).then(function(p){
+      if(permissions){
+        var commonPermissions = _.intersection(permissions, p);
+        if(commonPermissions.length&gt;0){
+          result.push(resource);
+        }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.addRoleParents" id="apidoc.element.acl.acl.prototype.addRoleParents">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>addRoleParents
+        <span class="apidocSignatureSpan">(role, parents, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRoleParents = function (role, parents, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.add(transaction, this.options.buckets.meta, 'roles', role);
+  this.backend.add(transaction, this.options.buckets.parents, role, parents);
+  return this.backend.endAsync(transaction).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+acl.addUserRoles('joed', 'guest')
+```
+
+Hierarchies of roles can be created by assigning parents to roles:
+
+```javascript
+acl.<span class="apidocCodeKeywordSpan">addRoleParents</span>('baz', ['foo', 'bar'])
+```
+
+Note that the order in which you call all the functions is irrelevant (you can add parents first and assign permissions to roles
+ later)
+
+```javascript
+acl.allow('foo', ['blogs', 'forums', 'news'], ['view', 'delete'])
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.addUserRoles" id="apidoc.element.acl.acl.prototype.addUserRoles">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>addUserRoles
+        <span class="apidocSignatureSpan">(userId, roles, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addUserRoles = function (userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.add(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+      roles.forEach(function(role) {
+        _this.backend.add(transaction, _this.options.buckets.roles, role, userId);
+      });
+  }
+  else {
+      this.backend.add(transaction, this.options.buckets.roles, roles, userId);
+  }
+
+  return this.backend.endAsync(transaction).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// allow function accepts arrays as any parameter
+acl.allow('member', 'blogs', ['edit', 'view', 'delete'])
+```
+
+Users are likewise created implicitly by assigning them roles:
+
+```javascript
+acl.<span class="apidocCodeKeywordSpan">addUserRoles</span>('joed', 'guest')
+```
+
+Hierarchies of roles can be created by assigning parents to roles:
+
+```javascript
+acl.addRoleParents('baz', ['foo', 'bar'])
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.allow" id="apidoc.element.acl.acl.prototype.allow">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>allow
+        <span class="apidocSignatureSpan">(roles, resources, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">allow = function (roles, resources, permissions, cb){
+  contract(arguments)
+    .params('string|array','string|array','string|array','function')
+    .params('string|array','string|array','string|array')
+    .params('array','function')
+    .params('array')
+    .end();
+
+  if((arguments.length == 1) || ((arguments.length===2)&amp;&amp;_.isObject(roles)&amp;&amp;_.isFunction(resources))){
+    return this._allowEx(roles).nodeify(resources);
+  }else{
+    var _this = this;
+
+    roles = makeArray(roles);
+    resources = makeArray(resources);
+
+    var transaction = _this.backend.begin();
+
+    _this.backend.add(transaction, _this.options.buckets.meta, 'roles', roles);
+
+    resources.forEach(function(resource){
+      roles.forEach(function(role){
+        _this.backend.add(transaction, allowsBucket(resource), role, permissions);
+      });
+    });
+
+    roles.forEach(function(role){
+      _this.backend.add(transaction, _this.options.buckets.resources, role, resources);
+    });
+
+    return _this.backend.endAsync(transaction).nodeify(cb);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+All the following functions return a promise or optionally take a callback with
+an err parameter as last parameter. We omit them in the examples for simplicity.
+
+Create roles implicitly by giving them permissions:
+
+```javascript
+// guest is allowed to view blogs
+acl.<span class="apidocCodeKeywordSpan">allow</span>('guest', 'blogs', 'view')
+
+// allow function accepts arrays as any parameter
+acl.allow('member', 'blogs', ['edit', 'view', 'delete'])
+```
+
+Users are likewise created implicitly by assigning them roles:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.allowedPermissions" id="apidoc.element.acl.acl.prototype.allowedPermissions">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>allowedPermissions
+        <span class="apidocSignatureSpan">(userId, resources, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">allowedPermissions = function (userId, resources, cb){
+  if (!userId)
+    return cb(null, {});
+
+  contract(arguments)
+    .params('string|number', 'string|array', 'function')
+    .params('string|number', 'string|array')
+    .end();
+
+  if (this.backend.unionsAsync) {
+    return this.optimizedAllowedPermissions(userId, resources, cb);
+  }
+
+  var _this = this;
+  resources = makeArray(resources);
+
+  return _this.userRoles(userId).then(function(roles){
+    var result = {};
+    return bluebird.all(resources.map(function(resource){
+      return _this._resourcePermissions(roles, resource).then(function(permissions){
+        result[resource] = permissions;
+      });
+    })).then(function(){
+      return result;
+    });
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+Note that all permissions must be full filed in order to get *true*.
+
+
+Sometimes is necessary to know what permissions a given user has over certain resources:
+
+```javascript
+acl.<span class="apidocCodeKeywordSpan">allowedPermissions</span>('james', ['blogs', 'forums'], function
+(err, permissions){
+    console.log(permissions)
+})
+```
+
+It will return an array of resource:[permissions] like this:
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.areAnyRolesAllowed" id="apidoc.element.acl.acl.prototype.areAnyRolesAllowed">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>areAnyRolesAllowed
+        <span class="apidocSignatureSpan">(roles, resource, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">areAnyRolesAllowed = function (roles, resource, permissions, cb){
+  contract(arguments)
+    .params('string|array', 'string', 'string|array', 'function')
+    .params('string|array', 'string', 'string|array')
+    .end();
+
+  roles = makeArray(roles);
+  permissions = makeArray(permissions);
+
+  if(roles.length===0){
+    return bluebird.resolve(false).nodeify(cb);
+  }else{
+    return this._checkPermissions(roles, resource, permissions).nodeify(cb);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    .params('string|number', 'string', 'string|array')
+    .end();
+
+  var _this = this;
+
+  return this.backend.getAsync(this.options.buckets.users, userId).then(function(roles){
+    if(roles.length){
+      return _this.<span class="apidocCodeKeywordSpan">areAnyRolesAllowed</span>(roles, resource, permissions);
+    }else{
+      return false;
+    }
+  }).nodeify(cb);
+};
+
+/**
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.hasRole" id="apidoc.element.acl.acl.prototype.hasRole">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>hasRole
+        <span class="apidocSignatureSpan">(userId, rolename, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasRole = function (userId, rolename, cb){
+  return this.userRoles(userId).then(function(roles){
+    return roles.indexOf(rolename) != -1;
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      acl.addUserRoles('harry', 'admin', function (err) {
+        if (err) return done(err);
+
+        acl.userRoles('harry', function(err, roles) {
+          if (err) return done(err);
+
+          assert.deepEqual(roles, ['admin']);
+          acl.<span class="apidocCodeKeywordSpan">hasRole</span>('harry', 'admin', function(err, is_in_role) {
+            if (err) return done(err);
+
+            assert.ok(is_in_role);
+            acl.hasRole('harry', 'no role', function(err, is_in_role) {
+if (err) return done(err);
+
+assert.notOk(is_in_role)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.isAllowed" id="apidoc.element.acl.acl.prototype.isAllowed">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>isAllowed
+        <span class="apidocSignatureSpan">(userId, resource, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">isAllowed = function (userId, resource, permissions, cb){
+  contract(arguments)
+    .params('string|number', 'string', 'string|array', 'function')
+    .params('string|number', 'string', 'string|array')
+    .end();
+
+  var _this = this;
+
+  return this.backend.getAsync(this.options.buckets.users, userId).then(function(roles){
+    if(roles.length){
+      return _this.areAnyRolesAllowed(roles, resource, permissions);
+    }else{
+      return false;
+    }
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+])
+```
+
+You can check if a user has permissions to access a given resource with *isAllowed*:
+
+```javascript
+acl.<span class="apidocCodeKeywordSpan">isAllowed</span>('joed', 'blogs', 'view', function(err, res
+){
+    if(res){
+        console.log("User joed is allowed to view blogs")
+    }
+})
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.middleware" id="apidoc.element.acl.acl.prototype.middleware">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>middleware
+        <span class="apidocSignatureSpan">(numPathComponents, userId, actions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">middleware = function (numPathComponents, userId, actions){
+  contract(arguments)
+    .params()
+    .params('number')
+    .params('number','string|number|function')
+    .params('number','string|number|function', 'string|array')
+    .end();
+
+  var acl = this;
+
+  function HttpError(errorCode, msg){
+    this.errorCode = errorCode;
+    this.message = msg;
+    this.name = this.constructor.name;
+
+    Error.captureStackTrace(this, this.constructor);
+    this.constructor.prototype.__proto__ = Error.prototype;
+  }
+
+  return function(req, res, next){
+    var _userId = userId,
+        _actions = actions,
+        resource,
+        url;
+
+    // call function to fetch userId
+    if(typeof userId === 'function'){
+      _userId = userId(req, res);
+    }
+    if (!userId) {
+      if((req.session) &amp;&amp; (req.session.userId)){
+        _userId = req.session.userId;
+      }else if((req.user) &amp;&amp; (req.user.id)){
+        _userId = req.user.id;
+      }else{
+        next(new HttpError(401, 'User not authenticated'));
+        return;
+      }
+    }
+
+    // Issue #80 - Additional check
+    if (!_userId) {
+      next(new HttpError(401, 'User not authenticated'));
+      return;
+    }
+
+    url = req.originalUrl.split('?')[0];
+    if(!numPathComponents){
+      resource = url;
+    }else{
+      resource = url.split('/').slice(0,numPathComponents+1).join('/');
+    }
+
+    if(!_actions){
+      _actions = req.method.toLowerCase();
+    }
+
+    acl.logger?acl.logger.debug('Requesting '+_actions+' on '+resource+' by user '+_userId):null;
+
+    acl.isAllowed(_userId, resource, _actions, function(err, allowed){
+      if (err){
+        next(new Error('Error checking permissions to access resource'));
+      }else if(allowed === false){
+        if (acl.logger) {
+          acl.logger.debug('Not allowed '+_actions+' on '+resource+' by user '+_userId);
+          acl.allowedPermissions(_userId, resource, function(err, obj){
+            acl.logger.debug('Allowed permissions: '+util.inspect(obj));
+          });
+        }
+        next(new HttpError(403,'Insufficient permissions to access resource'));
+      }else{
+        acl.logger?acl.logger.debug('Allowed '+_actions+' on '+resource+' by user '+_userId):null;
+        next();
+      }
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ {'forums':['get', 'put']}]
+```
+
+
+Finally, we provide a middleware for Express for easy protection of resources.
+
+```javascript
+acl.<span class="apidocCodeKeywordSpan">middleware</span>()
+```
+
+We can protect a resource like this:
+
+```javascript
+app.put('/blogs/:id', acl.middleware(), function(req, res, next){â€¦}
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.optimizedAllowedPermissions" id="apidoc.element.acl.acl.prototype.optimizedAllowedPermissions">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>optimizedAllowedPermissions
+        <span class="apidocSignatureSpan">(userId, resources, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">optimizedAllowedPermissions = function (userId, resources, cb){
+  if (!userId) {
+    return cb(null, {});
+  }
+
+  contract(arguments)
+    .params('string|number', 'string|array', 'function|undefined')
+    .params('string|number', 'string|array')
+    .end();
+
+  resources = makeArray(resources);
+  var self = this;
+
+  return this._allUserRoles(userId).then(function(roles) {
+    var buckets = resources.map(allowsBucket);
+    if (roles.length === 0) {
+      var emptyResult = {};
+      buckets.forEach(function(bucket) {
+        emptyResult[bucket] = [];
+      });
+      return bluebird.resolve(emptyResult);
+    }
+
+    return self.backend.unionsAsync(buckets, roles);
+  }).then(function(response) {
+    var result = {};
+    Object.keys(response).forEach(function(bucket) {
+      result[keyFromAllowsBucket(bucket)] = response[bucket];
+    });
+
+    return result;
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+contract(arguments)
+  .params('string|number', 'string|array', 'function')
+  .params('string|number', 'string|array')
+  .end();
+
+if (this.backend.unionsAsync) {
+  return this.<span class="apidocCodeKeywordSpan">optimizedAllowedPermissions</span>(userId, resources, cb);
+}
+
+var _this = this;
+resources = makeArray(resources);
+
+return _this.userRoles(userId).then(function(roles){
+  var result = {};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.permittedResources" id="apidoc.element.acl.acl.prototype.permittedResources">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>permittedResources
+        <span class="apidocSignatureSpan">(roles, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">permittedResources = function (roles, permissions, cb){
+  var _this = this;
+  var result = _.isUndefined(permissions) ? {} : [];
+  return this._rolesResources(roles).then(function(resources){
+    return bluebird.all(resources.map(function(resource){
+      return _this._resourcePermissions(roles, resource).then(function(p){
+        if(permissions){
+          var commonPermissions = _.intersection(permissions, p);
+          if(commonPermissions.length&gt;0){
+            result.push(resource);
+          }
+        }else{
+          result[resource] = p;
+        }
+      });
+    })).then(function(){
+      return result;
+    });
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (_.isFunction(permissions)){
+  cb = permissions;
+  permissions = undefined;
+}else if(permissions){
+  permissions = makeArray(permissions);
+}
+
+return this.<span class="apidocCodeKeywordSpan">permittedResources</span>(roles, permissions, cb);
+};
+
+Acl.prototype.permittedResources = function(roles, permissions, cb){
+var _this = this;
+var result = _.isUndefined(permissions) ? {} : [];
+return this._rolesResources(roles).then(function(resources){
+  return bluebird.all(resources.map(function(resource){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.removeAllow" id="apidoc.element.acl.acl.prototype.removeAllow">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeAllow
+        <span class="apidocSignatureSpan">(role, resources, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeAllow = function (role, resources, permissions, cb){
+  contract(arguments)
+    .params('string','string|array','string|array','function')
+    .params('string','string|array','string|array')
+    .params('string','string|array','function')
+    .params('string','string|array')
+    .end();
+
+    resources = makeArray(resources);
+    if(cb || (permissions &amp;&amp; !_.isFunction(permissions))){
+      permissions = makeArray(permissions);
+    }else {
+      cb = permissions;
+      permissions = null;
+    }
+
+  return this.removePermissions(role, resources, permissions, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+exports.PermissionRemoval= function () {
+  describe('removeAllow', function () {
+it('Remove get permissions from resources blogs and forums from role fumanchu', function (done) {
+  var acl = new Acl(this.backend)
+  acl.<span class="apidocCodeKeywordSpan">removeAllow</span>('fumanchu', ['blogs','forums'], '
+;get', function (err) {
+    assert(!err)
+    done()
+  })
+})
+
+it('Remove delete and put permissions from resource news from role fumanchu', function (done) {
+  var acl = new Acl(this.backend)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.removePermissions" id="apidoc.element.acl.acl.prototype.removePermissions">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removePermissions
+        <span class="apidocSignatureSpan">(role, resources, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removePermissions = function (role, resources, permissions, cb){
+
+  var _this = this;
+
+  var transaction = _this.backend.begin();
+  resources.forEach(function(resource){
+    var bucket = allowsBucket(resource);
+    if(permissions){
+      _this.backend.remove(transaction, bucket, role, permissions);
+    }else{
+      _this.backend.del(transaction, bucket, role);
+      _this.backend.remove(transaction, _this.options.buckets.resources, role, resource);
+    }
+  });
+
+  // Remove resource from role if no rights for that role exists.
+  // Not fully atomic...
+  return _this.backend.endAsync(transaction).then(function(){
+    var transaction = _this.backend.begin();
+    return bluebird.all(resources.map(function(resource){
+      var bucket = allowsBucket(resource);
+      return _this.backend.getAsync(bucket, role).then(function(permissions){
+        if(permissions.length==0){
+          _this.backend.remove(transaction, _this.options.buckets.resources, role, resource);
+        }
+      });
+    })).then(function(){
+      return _this.backend.endAsync(transaction);
+    });
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  if(cb || (permissions &amp;&amp; !_.isFunction(permissions))){
+    permissions = makeArray(permissions);
+  }else {
+    cb = permissions;
+    permissions = null;
+  }
+
+return this.<span class="apidocCodeKeywordSpan">removePermissions</span>(role, resources, permissions, cb);
+}
+
+/**
+removePermissions( role, resources, permissions)
+
+Remove permissions from the given roles owned by the given role.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.removeResource" id="apidoc.element.acl.acl.prototype.removeResource">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeResource
+        <span class="apidocSignatureSpan">(resource, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeResource = function (resource, cb){
+  contract(arguments)
+    .params('string', 'function')
+    .params('string')
+    .end();
+
+  var _this = this;
+  return this.backend.getAsync(this.options.buckets.meta, 'roles').then(function(roles){
+    var transaction = _this.backend.begin();
+    _this.backend.del(transaction, allowsBucket(resource), roles);
+    roles.forEach(function(role){
+      _this.backend.remove(transaction, _this.options.buckets.resources, role, resource);
+    })
+    return _this.backend.endAsync(transaction);
+  }).nodeify(cb)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+exports.ResourceRemoval = function () {
+  describe('removeResource', function () {
+it('Remove resource blogs', function (done) {
+  var acl = new Acl(this.backend)
+  acl.<span class="apidocCodeKeywordSpan">removeResource</span>('blogs', function (err) {
+    assert(!err)
+    done()
+  })
+})
+
+it('Remove resource users', function (done) {
+  var acl = new Acl(this.backend)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.removeRole" id="apidoc.element.acl.acl.prototype.removeRole">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeRole
+        <span class="apidocSignatureSpan">(role, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeRole = function (role, cb){
+  contract(arguments)
+    .params('string','function')
+    .params('string').end();
+
+  var _this = this;
+  // Note that this is not fully transactional.
+  return this.backend.getAsync(this.options.buckets.resources, role).then(function(resources){
+    var transaction = _this.backend.begin();
+
+    resources.forEach(function(resource){
+      var bucket = allowsBucket(resource);
+      _this.backend.del(transaction, bucket, role);
+    });
+
+    _this.backend.del(transaction, _this.options.buckets.resources, role);
+    _this.backend.del(transaction, _this.options.buckets.parents, role);
+    _this.backend.del(transaction, _this.options.buckets.roles, role)
+    _this.backend.remove(transaction, _this.options.buckets.meta, 'roles', role);
+
+    // `users` collection keeps the removed role
+    // because we don't know what users have `role` assigned.
+    return _this.backend.endAsync(transaction);
+  }).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+exports.RoleRemoval = function () {
+  describe('removeRole', function () {
+it('Remove role fumanchu', function (done) {
+  var acl = new Acl(this.backend)
+  acl.<span class="apidocCodeKeywordSpan">removeRole</span>('fumanchu', function (err) {
+    assert(!err)
+    done()
+  })
+})
+
+it('Remove role member', function (done) {
+  var acl = new Acl(this.backend)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.removeRoleParents" id="apidoc.element.acl.acl.prototype.removeRoleParents">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeRoleParents
+        <span class="apidocSignatureSpan">(role, parents, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeRoleParents = function (role, parents, cb){
+  contract(arguments)
+    .params('string', 'string|array', 'function')
+    .params('string', 'string|array')
+    .params('string', 'function')
+    .params('string')
+    .end();
+
+  if (!cb &amp;&amp; _.isFunction(parents)) {
+    cb = parents;
+    parents = null;
+  }
+
+  var transaction = this.backend.begin();
+  if (parents) {
+    this.backend.remove(transaction, this.options.buckets.parents, role, parents);
+  } else {
+    this.backend.del(transaction, this.options.buckets.parents, role);
+  }
+  return this.backend.endAsync(transaction).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        assert.include(resources.x, 'read4');
+        assert.include(resources.x, 'read5');
+      })
+      .done(done, done);
+});
+
+it('Operation uses a callback when removing a specific parent role', function (done) {
+  acl.<span class="apidocCodeKeywordSpan">removeRoleParents</span>('child', 'parentX', function (err) {
+    assert(!err);
+    done();
+  });
+});
+
+it('Operation uses a callback when removing multiple specific parent roles', function (done) {
+  acl.removeRoleParents('child', ['parentX', 'parentY'], function (err) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.removeUserRoles" id="apidoc.element.acl.acl.prototype.removeUserRoles">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>removeUserRoles
+        <span class="apidocSignatureSpan">(userId, roles, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removeUserRoles = function (userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.remove(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+    roles.forEach(function(role) {
+      _this.backend.remove(transaction, _this.options.buckets.roles, role, userId);
+    });
+  }
+  else {
+    this.backend.remove(transaction, this.options.buckets.roles, roles, userId);
+  }
+
+  return this.backend.endAsync(transaction).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+exports.UserRoleRemoval = function () {
+  describe('Remove user roles', function () {
+it('Remove role guest from joed', function (done) {
+  var acl = new Acl(this.backend)
+  acl.<span class="apidocCodeKeywordSpan">removeUserRoles</span>('joed','guest', function (err) {
+    assert(!err)
+    done()
+  })
+})
+
+it('Remove role guest from userId=0', function (done) {
+  var acl = new Acl(this.backend)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.roleUsers" id="apidoc.element.acl.acl.prototype.roleUsers">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>roleUsers
+        <span class="apidocSignatureSpan">(roleName, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">roleUsers = function (roleName, cb){
+  return this.backend.getAsync(this.options.buckets.roles, roleName).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  describe('read Role Users', function() {
+    it('run roleUsers function', function(done) {
+var acl = new Acl(this.backend)
+acl.addUserRoles('harry', 'admin', function (err) {
+  if (err) return done(err);
+
+  acl.<span class="apidocCodeKeywordSpan">roleUsers</span>('admin', function(err, users) {
+    if (err) return done(err);
+    assert.include(users, 'harry')
+    assert.isFalse('invalid User' in users)
+    done();
+  })
+})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.userRoles" id="apidoc.element.acl.acl.prototype.userRoles">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>userRoles
+        <span class="apidocSignatureSpan">(userId, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">userRoles = function (userId, cb){
+  return this.backend.getAsync(this.options.buckets.users, userId).nodeify(cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+@param {String|Number} User id.
+@param {String|Number} rolename.
+@param {Function} Callback called when finished.
+@return {Promise} Promise resolved with boolean of whether user is in role
+*/
+Acl.prototype.hasRole = function(userId, rolename, cb){
+return this.<span class="apidocCodeKeywordSpan">userRoles</span>(userId).then(function(roles){
+  return roles.indexOf(rolename) != -1;
+}).nodeify(cb);
+};
+
+/**
+addRoleParents( role, parents, function(err) )
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.whatResources" id="apidoc.element.acl.acl.prototype.whatResources">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>whatResources
+        <span class="apidocSignatureSpan">(roles, permissions, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">whatResources = function (roles, permissions, cb){
+  contract(arguments)
+    .params('string|array')
+    .params('string|array','string|array')
+    .params('string|array','function')
+    .params('string|array','string|array','function')
+    .end();
+
+  roles = makeArray(roles);
+  if (_.isFunction(permissions)){
+    cb = permissions;
+    permissions = undefined;
+  }else if(permissions){
+    permissions = makeArray(permissions);
+  }
+
+  return this.permittedResources(roles, permissions, cb);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+exports.WhatResources = function () {
+  describe('whatResources queries', function () {
+it('What resources have "bar" some rights on?', function (done) {
+  var acl = new Acl(this.backend)
+
+  acl.<span class="apidocCodeKeywordSpan">whatResources</span>('bar', function (err, resources) {
+    assert.isNull(err)
+    assert.include(resources.blogs, 'view')
+    assert.include(resources.blogs, 'delete')
+    done()
+  })
+})
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.acl.prototype.middleware" id="apidoc.module.acl.acl.prototype.middleware">module acl.acl.prototype.middleware</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.middleware.middleware" id="apidoc.element.acl.acl.prototype.middleware.middleware">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.</span>middleware
+        <span class="apidocSignatureSpan">(numPathComponents, userId, actions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">middleware = function (numPathComponents, userId, actions){
+  contract(arguments)
+    .params()
+    .params('number')
+    .params('number','string|number|function')
+    .params('number','string|number|function', 'string|array')
+    .end();
+
+  var acl = this;
+
+  function HttpError(errorCode, msg){
+    this.errorCode = errorCode;
+    this.message = msg;
+    this.name = this.constructor.name;
+
+    Error.captureStackTrace(this, this.constructor);
+    this.constructor.prototype.__proto__ = Error.prototype;
+  }
+
+  return function(req, res, next){
+    var _userId = userId,
+        _actions = actions,
+        resource,
+        url;
+
+    // call function to fetch userId
+    if(typeof userId === 'function'){
+      _userId = userId(req, res);
+    }
+    if (!userId) {
+      if((req.session) &amp;&amp; (req.session.userId)){
+        _userId = req.session.userId;
+      }else if((req.user) &amp;&amp; (req.user.id)){
+        _userId = req.user.id;
+      }else{
+        next(new HttpError(401, 'User not authenticated'));
+        return;
+      }
+    }
+
+    // Issue #80 - Additional check
+    if (!_userId) {
+      next(new HttpError(401, 'User not authenticated'));
+      return;
+    }
+
+    url = req.originalUrl.split('?')[0];
+    if(!numPathComponents){
+      resource = url;
+    }else{
+      resource = url.split('/').slice(0,numPathComponents+1).join('/');
+    }
+
+    if(!_actions){
+      _actions = req.method.toLowerCase();
+    }
+
+    acl.logger?acl.logger.debug('Requesting '+_actions+' on '+resource+' by user '+_userId):null;
+
+    acl.isAllowed(_userId, resource, _actions, function(err, allowed){
+      if (err){
+        next(new Error('Error checking permissions to access resource'));
+      }else if(allowed === false){
+        if (acl.logger) {
+          acl.logger.debug('Not allowed '+_actions+' on '+resource+' by user '+_userId);
+          acl.allowedPermissions(_userId, resource, function(err, obj){
+            acl.logger.debug('Allowed permissions: '+util.inspect(obj));
+          });
+        }
+        next(new HttpError(403,'Insufficient permissions to access resource'));
+      }else{
+        acl.logger?acl.logger.debug('Allowed '+_actions+' on '+resource+' by user '+_userId):null;
+        next();
+      }
+    });
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ {'forums':['get', 'put']}]
+```
+
+
+Finally, we provide a middleware for Express for easy protection of resources.
+
+```javascript
+acl.<span class="apidocCodeKeywordSpan">middleware</span>()
+```
+
+We can protect a resource like this:
+
+```javascript
+app.put('/blogs/:id', acl.middleware(), function(req, res, next){â€¦}
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.acl.prototype.middleware.errorHandler" id="apidoc.element.acl.acl.prototype.middleware.errorHandler">
+        function <span class="apidocSignatureSpan">acl.acl.prototype.middleware.</span>errorHandler
+        <span class="apidocSignatureSpan">(contentType)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">errorHandler = function (contentType){
+  var method = 'end';
+
+  if(contentType){
+    switch (contentType) {
+      case 'json': method = 'json'; break;
+      case 'html': method = 'send'; break;
+    }
+  }
+
+  return function(err, req, res, next){
+    if(err.name !== 'HttpError' || !err.errorCode) return next(err);
+    res.status(err.errorCode)[method](err.message);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.backend" id="apidoc.module.acl.backend">module acl.backend</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.add" id="apidoc.element.acl.backend.add">
+        function <span class="apidocSignatureSpan">acl.backend.</span>add
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">add = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('object', 'string', 'string|number','string|array|number')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">add</span>(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.add(transaction, _this.options.buckets.roles, role, userId);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.begin" id="apidoc.element.acl.backend.begin">
+        function <span class="apidocSignatureSpan">acl.backend.</span>begin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">begin = function (){
+  // returns a transaction object
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.<span class="apidocCodeKeywordSpan">begin</span>();
+  this.backend.add(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.clean" id="apidoc.element.acl.backend.clean">
+        function <span class="apidocSignatureSpan">acl.backend.</span>clean
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clean = function (cb){
+  contract(arguments).params('function').end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  describe('unions', function() {
+    before(function(done) {
+var backend = this.backend;
+if (!backend.unions) {
+  this.skip();
+}
+
+backend.<span class="apidocCodeKeywordSpan">clean</span>(function() {
+  var transaction = backend.begin();
+  Object.keys(testData).forEach(function(key) {
+    buckets.forEach(function(bucket) {
+      backend.add(transaction, bucket, key, testData[key]);
+    });
+  });
+  backend.end(transaction, done);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.del" id="apidoc.element.acl.backend.del">
+        function <span class="apidocSignatureSpan">acl.backend.</span>del
+        <span class="apidocSignatureSpan">(transaction, bucket, keys)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">del = function (transaction, bucket, keys){
+  contract(arguments)
+      .params('object', 'string', 'string|array')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  parents = null;
+}
+
+var transaction = this.backend.begin();
+if (parents) {
+  this.backend.remove(transaction, this.options.buckets.parents, role, parents);
+} else {
+  this.backend.<span class="apidocCodeKeywordSpan">del</span>(transaction, this.options.buckets.parents, role);
+}
+return this.backend.endAsync(transaction).nodeify(cb);
+};
+
+/**
+removeRole( role, function(err) )
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.end" id="apidoc.element.acl.backend.end">
+        function <span class="apidocSignatureSpan">acl.backend.</span>end
+        <span class="apidocSignatureSpan">(transaction, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (transaction, cb){
+  contract(arguments).params('object', 'function').end();
+  // Execute transaction
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+contract.debug = true;
+
+var Acl = function (backend, logger, options){
+contract(arguments)
+  .params('object')
+  .params('object','object')
+  .params('object','object', 'object')
+  .<span class="apidocCodeKeywordSpan">end</span>();
+
+options = _.extend({
+  buckets: {
+    meta: 'meta',
+    parents: 'parents',
+    permissions: 'permissions',
+    resources: 'resources',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.get" id="apidoc.element.acl.backend.get">
+        function <span class="apidocSignatureSpan">acl.backend.</span>get
+        <span class="apidocSignatureSpan">(bucket, key, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">get = function (bucket, key, cb){
+  contract(arguments)
+      .params('string', 'string|number', 'function')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.remove" id="apidoc.element.acl.backend.remove">
+        function <span class="apidocSignatureSpan">acl.backend.</span>remove
+        <span class="apidocSignatureSpan">(transaction, bucket, key, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">remove = function (transaction, bucket, key, values){
+  contract(arguments)
+      .params('object', 'string', 'string|number','string|array|number')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.removeUserRoles = function(userId, roles, cb){
+  contract(arguments)
+.params('string|number','string|array','function')
+.params('string|number','string|array')
+.end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">remove</span>(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.remove(transaction, _this.options.buckets.roles, role, userId);
+});
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.union" id="apidoc.element.acl.backend.union">
+        function <span class="apidocSignatureSpan">acl.backend.</span>union
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">union = function (bucket, keys, cb){
+  contract(arguments)
+    .params('string', 'array', 'function')
+    .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Return all roles in the hierarchy including the given roles.
+//
+/*
+Acl.prototype._allRoles = function(roleNames, cb){
+var _this = this, roles;
+
+_this._rolesParents(roleNames, function(err, parents){
+  roles = _.<span class="apidocCodeKeywordSpan">union</span>(roleNames, parents);
+  async.whilst(
+    function (){
+      return parents.length &gt;0;
+    },
+    function (cb) {
+      _this._rolesParents(parents, function(err, result){
+        if(!err){
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.backend.unions" id="apidoc.element.acl.backend.unions">
+        function <span class="apidocSignatureSpan">acl.backend.</span>unions
+        <span class="apidocSignatureSpan">(bucket, keys, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">unions = function (bucket, keys, cb){
+  contract(arguments)
+      .params('array', 'array', 'function')
+      .end();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+it('should respond with an appropriate map', function(done) {
+  var expected = {
+    'bucket1': ["1", "2", "3", "4", "5"],
+    'bucket2': ["1", "2", "3", "4", "5"]
+  };
+  this.backend.<span class="apidocCodeKeywordSpan">unions</span>(buckets, Object.keys(testData), function(err, result) {
+    expect(err).to.be.null;
+    expect(result).to.be.eql(expected);
+    done();
+  });
+});
+
+it('should get only the specified keys', function(done) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.acl.contract" id="apidoc.module.acl.contract">module acl.contract</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract.contract" id="apidoc.element.acl.contract.contract">
+        function <span class="apidocSignatureSpan">acl.</span>contract
+        <span class="apidocSignatureSpan">(args)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">contract = function (args){
+  if(contract.debug===true){
+    contract.fulfilled = false;
+    contract.args = _.toArray(args);
+    contract.checkedParams = [];
+    return contract;
+  }else{
+    return noop;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract.end" id="apidoc.element.acl.contract.end">
+        function <span class="apidocSignatureSpan">acl.contract.</span>end
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (){
+  if(!this.fulfilled){
+    printParamsError(this.args, this.checkedParams);
+    throw new Error('Broke parameter contract');
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+contract.debug = true;
+
+var Acl = function (backend, logger, options){
+contract(arguments)
+  .params('object')
+  .params('object','object')
+  .params('object','object', 'object')
+  .<span class="apidocCodeKeywordSpan">end</span>();
+
+options = _.extend({
+  buckets: {
+    meta: 'meta',
+    parents: 'parents',
+    permissions: 'permissions',
+    resources: 'resources',
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.acl.contract.params" id="apidoc.element.acl.contract.params">
+        function <span class="apidocSignatureSpan">acl.contract.</span>params
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">params = function (){
+  var i, len;
+  this.fulfilled |= checkParams(this.args, _.toArray(arguments));
+  if(this.fulfilled){
+    return noop;
+  }else{
+    this.checkedParams.push(arguments);
+    return this;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+bluebird = require('bluebird'),
+contract = require('./contract');
+
+contract.debug = true;
+
+var Acl = function (backend, logger, options){
+contract(arguments)
+  .<span class="apidocCodeKeywordSpan">params</span>('object')
+  .params('object','object')
+  .params('object','object', 'object')
+  .end();
+
+options = _.extend({
+  buckets: {
+    meta: 'meta',
+...</pre></li>
+    </ul>
 
 
 </div>
@@ -645,7 +3103,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
     }
   })
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">add</span>(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.add(transaction, _this.options.buckets.roles, role, userId);
+...</pre></li>
     </ul>
 
 
@@ -661,7 +3135,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
   // returns a transaction object(just an array of functions will do here.)
   return [];
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.<span class="apidocCodeKeywordSpan">begin</span>();
+  this.backend.add(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+...</pre></li>
     </ul>
 
 
@@ -678,7 +3168,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
   this._buckets = {};
   cb();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  describe('unions', function() {
+    before(function(done) {
+var backend = this.backend;
+if (!backend.unions) {
+  this.skip();
+}
+
+backend.<span class="apidocCodeKeywordSpan">clean</span>(function() {
+  var transaction = backend.begin();
+  Object.keys(testData).forEach(function(key) {
+    buckets.forEach(function(bucket) {
+      backend.add(transaction, bucket, key, testData[key]);
+    });
+  });
+  backend.end(transaction, done);
+...</pre></li>
     </ul>
 
 
@@ -706,7 +3212,22 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
     }
   })
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  parents = null;
+}
+
+var transaction = this.backend.begin();
+if (parents) {
+  this.backend.remove(transaction, this.options.buckets.parents, role, parents);
+} else {
+  this.backend.<span class="apidocCodeKeywordSpan">del</span>(transaction, this.options.buckets.parents, role);
+}
+return this.backend.endAsync(transaction).nodeify(cb);
+};
+
+/**
+removeRole( role, function(err) )
+...</pre></li>
     </ul>
 
 
@@ -727,7 +3248,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
   }
   cb();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+contract.debug = true;
+
+var Acl = function (backend, logger, options){
+contract(arguments)
+  .params('object')
+  .params('object','object')
+  .params('object','object', 'object')
+  .<span class="apidocCodeKeywordSpan">end</span>();
+
+options = _.extend({
+  buckets: {
+    meta: 'meta',
+    parents: 'parents',
+    permissions: 'permissions',
+    resources: 'resources',
+...</pre></li>
     </ul>
 
 
@@ -776,7 +3313,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.removeUserRoles = function(userId, roles, cb){
+  contract(arguments)
+.params('string|number','string|array','function')
+.params('string|number','string|array')
+.end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">remove</span>(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.remove(transaction, _this.options.buckets.roles, role, userId);
+});
+...</pre></li>
     </ul>
 
 
@@ -816,7 +3369,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
     cb(undefined, []);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Return all roles in the hierarchy including the given roles.
+//
+/*
+Acl.prototype._allRoles = function(roleNames, cb){
+var _this = this, roles;
+
+_this._rolesParents(roleNames, function(err, parents){
+  roles = _.<span class="apidocCodeKeywordSpan">union</span>(roleNames, parents);
+  async.whilst(
+    function (){
+      return parents.length &gt;0;
+    },
+    function (cb) {
+      _this._rolesParents(parents, function(err, result){
+        if(!err){
+...</pre></li>
     </ul>
 
 
@@ -846,7 +3415,23 @@ an err parameter as last parameter. We omit them in the examples for simplicity.
 
   cb(null, results);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+it('should respond with an appropriate map', function(done) {
+  var expected = {
+    'bucket1': ["1", "2", "3", "4", "5"],
+    'bucket2': ["1", "2", "3", "4", "5"]
+  };
+  this.backend.<span class="apidocCodeKeywordSpan">unions</span>(buckets, Object.keys(testData), function(err, result) {
+    expect(err).to.be.null;
+    expect(result).to.be.eql(expected);
+    done();
+  });
+});
+
+it('should get only the specified keys', function(done) {
+...</pre></li>
     </ul>
 
 
@@ -941,7 +3526,23 @@ Create roles implicitly by giving them permissions:
     });
   })
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">add</span>(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.add(transaction, _this.options.buckets.roles, role, userId);
+...</pre></li>
     </ul>
 
 
@@ -957,7 +3558,23 @@ Create roles implicitly by giving them permissions:
   // returns a transaction object(just an array of functions will do here.)
   return [];
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.<span class="apidocCodeKeywordSpan">begin</span>();
+  this.backend.add(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+...</pre></li>
     </ul>
 
 
@@ -978,7 +3595,23 @@ Create roles implicitly by giving them permissions:
     },cb);
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  describe('unions', function() {
+    before(function(done) {
+var backend = this.backend;
+if (!backend.unions) {
+  this.skip();
+}
+
+backend.<span class="apidocCodeKeywordSpan">clean</span>(function() {
+  var transaction = backend.begin();
+  Object.keys(testData).forEach(function(key) {
+    buckets.forEach(function(bucket) {
+      backend.add(transaction, bucket, key, testData[key]);
+    });
+  });
+  backend.end(transaction, done);
+...</pre></li>
     </ul>
 
 
@@ -1009,7 +3642,22 @@ Create roles implicitly by giving them permissions:
     });
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  parents = null;
+}
+
+var transaction = this.backend.begin();
+if (parents) {
+  this.backend.remove(transaction, this.options.buckets.parents, role, parents);
+} else {
+  this.backend.<span class="apidocCodeKeywordSpan">del</span>(transaction, this.options.buckets.parents, role);
+}
+return this.backend.endAsync(transaction).nodeify(cb);
+};
+
+/**
+removeRole( role, function(err) )
+...</pre></li>
     </ul>
 
 
@@ -1027,7 +3675,23 @@ Create roles implicitly by giving them permissions:
     cb(err instanceof Error? err : undefined);
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+contract.debug = true;
+
+var Acl = function (backend, logger, options){
+contract(arguments)
+  .params('object')
+  .params('object','object')
+  .params('object','object', 'object')
+  .<span class="apidocCodeKeywordSpan">end</span>();
+
+options = _.extend({
+  buckets: {
+    meta: 'meta',
+    parents: 'parents',
+    permissions: 'permissions',
+    resources: 'resources',
+...</pre></li>
     </ul>
 
 
@@ -1096,7 +3760,23 @@ Create roles implicitly by giving them permissions:
     });
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.removeUserRoles = function(userId, roles, cb){
+  contract(arguments)
+.params('string|number','string|array','function')
+.params('string|number','string|array')
+.end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">remove</span>(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.remove(transaction, _this.options.buckets.roles, role, userId);
+});
+...</pre></li>
     </ul>
 
 
@@ -1131,7 +3811,23 @@ Create roles implicitly by giving them permissions:
     });
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Return all roles in the hierarchy including the given roles.
+//
+/*
+Acl.prototype._allRoles = function(roleNames, cb){
+var _this = this, roles;
+
+_this._rolesParents(roleNames, function(err, parents){
+  roles = _.<span class="apidocCodeKeywordSpan">union</span>(roleNames, parents);
+  async.whilst(
+    function (){
+      return parents.length &gt;0;
+    },
+    function (cb) {
+      _this._rolesParents(parents, function(err, result){
+        if(!err){
+...</pre></li>
     </ul>
 
 
@@ -1200,7 +3896,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
       transaction.sadd(key, values);
     }
 	}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">add</span>(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.add(transaction, _this.options.buckets.roles, role, userId);
+...</pre></li>
     </ul>
 
 
@@ -1215,7 +3927,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
     <li>description and source-code<pre class="apidocCodePre">begin = function (){
   return this.redis.multi();
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+*/
+Acl.prototype.addUserRoles = function(userId, roles, cb){
+  contract(arguments)
+    .params('string|number','string|array','function')
+    .params('string|number','string|array')
+    .end();
+
+  var transaction = this.backend.<span class="apidocCodeKeywordSpan">begin</span>();
+  this.backend.add(transaction, this.options.buckets.meta, 'users', userId);
+  this.backend.add(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+    var _this = this;
+
+roles.forEach(function(role) {
+...</pre></li>
     </ul>
 
 
@@ -1237,7 +3965,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
     return self.prefix+'_'+bucket+'@'+keys;
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   Gets the contents at the bucket's key.
+*/
+get : function(bucket, key, cb){
+		contract(arguments)
+	      .params('string', 'string|number', 'function')
+	      .end();
+
+  key = this.<span class="apidocCodeKeywordSpan">bucketKey</span>(bucket, key);
+
+  this.redis.smembers(key, cb);
+},
+
+/**
+  Gets an object mapping each passed bucket to the union of the specified keys inside that bucket.
+*/
+...</pre></li>
     </ul>
 
 
@@ -1260,7 +4004,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  describe('unions', function() {
+    before(function(done) {
+var backend = this.backend;
+if (!backend.unions) {
+  this.skip();
+}
+
+backend.<span class="apidocCodeKeywordSpan">clean</span>(function() {
+  var transaction = backend.begin();
+  Object.keys(testData).forEach(function(key) {
+    buckets.forEach(function(bucket) {
+      backend.add(transaction, bucket, key, testData[key]);
+    });
+  });
+  backend.end(transaction, done);
+...</pre></li>
     </ul>
 
 
@@ -1287,7 +4047,22 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
 
   transaction.del(keys);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  parents = null;
+}
+
+var transaction = this.backend.begin();
+if (parents) {
+  this.backend.remove(transaction, this.options.buckets.parents, role, parents);
+} else {
+  this.backend.<span class="apidocCodeKeywordSpan">del</span>(transaction, this.options.buckets.parents, role);
+}
+return this.backend.endAsync(transaction).nodeify(cb);
+};
+
+/**
+removeRole( role, function(err) )
+...</pre></li>
     </ul>
 
 
@@ -1303,7 +4078,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
 		contract(arguments).params('object', 'function').end();
   transaction.exec(function(){cb()});
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+contract.debug = true;
+
+var Acl = function (backend, logger, options){
+contract(arguments)
+  .params('object')
+  .params('object','object')
+  .params('object','object', 'object')
+  .<span class="apidocCodeKeywordSpan">end</span>();
+
+options = _.extend({
+  buckets: {
+    meta: 'meta',
+    parents: 'parents',
+    permissions: 'permissions',
+    resources: 'resources',
+...</pre></li>
     </ul>
 
 
@@ -1351,7 +4142,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
     transaction.srem(key, values);
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Acl.prototype.removeUserRoles = function(userId, roles, cb){
+  contract(arguments)
+.params('string|number','string|array','function')
+.params('string|number','string|array')
+.end();
+
+  var transaction = this.backend.begin();
+  this.backend.<span class="apidocCodeKeywordSpan">remove</span>(transaction, this.options.buckets.users, userId, roles);
+
+  if (Array.isArray(roles)) {
+var _this = this;
+
+roles.forEach(function(role) {
+  _this.backend.remove(transaction, _this.options.buckets.roles, role, userId);
+});
+...</pre></li>
     </ul>
 
 
@@ -1371,7 +4178,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
     keys = this.bucketKey(bucket, keys);
     this.redis.sunion(keys, cb);
 	}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+// Return all roles in the hierarchy including the given roles.
+//
+/*
+Acl.prototype._allRoles = function(roleNames, cb){
+var _this = this, roles;
+
+_this._rolesParents(roleNames, function(err, parents){
+  roles = _.<span class="apidocCodeKeywordSpan">union</span>(roleNames, parents);
+  async.whilst(
+    function (){
+      return parents.length &gt;0;
+    },
+    function (cb) {
+      _this._rolesParents(parents, function(err, result){
+        if(!err){
+...</pre></li>
     </ul>
 
 
@@ -1413,7 +4236,23 @@ acl = new acl(new acl.mongodbBackend(dbInstance, prefix));
     cb(err, result);
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+it('should respond with an appropriate map', function(done) {
+  var expected = {
+    'bucket1': ["1", "2", "3", "4", "5"],
+    'bucket2': ["1", "2", "3", "4", "5"]
+  };
+  this.backend.<span class="apidocCodeKeywordSpan">unions</span>(buckets, Object.keys(testData), function(err, result) {
+    expect(err).to.be.null;
+    expect(result).to.be.eql(expected);
+    done();
+  });
+});
+
+it('should get only the specified keys', function(done) {
+...</pre></li>
     </ul>
 
 
